@@ -2,50 +2,47 @@
 
 **Index:**
 
-1. [Setting Up a New "Dub" File](#setting-up-a-new-dub-file) 📁
-2. [Zsh Setup](#zsh-setup) 🖥️
-3. [Enable Plugins](#enable-plugins) 🔌
-4. [Enable Auto-suggestions](#enable-auto-suggestions) 🤖
-5. [Enable Syntax Highlighting](#enable-syntax-highlighting) 🌈
-6. [Customize with Powerlevel10k Theme](#customize-with-powerlevel10k-theme) 🎨
-7. [Change Default Shell to Zsh on Ubuntu](#change-default-shell-to-zsh-on-ubuntu) 🔄
-8. [Auto-completion Options](#auto-completion-options) ⌨️
-9. [Use History](#use-history) 🕒
-10. [Zsh Dracula Theme](#zsh-dracula-theme) 🧛‍♂️
-11. [Package Managers](#package-managers) 📦
-    - [Synaptic Package Manager](#synaptic-package-manager) 🖥️‍🔍
-    - [Flatpak](#flatpak) 📦
-12. [Basic](#basic) ⚙️
-    - [Fully Charged Notification](#fully-charged-notification) 🔋
-    - [Low Battery Notification](#low-battery-notification) 🔋
-    - [Gnome Shell Integration](#gnome-shell-integration) 🐚
-13. [Installing Utilities](#installing-utilities) 🛠️
-    - [Install Ubuntu Restricted Extras](#install-ubuntu-restricted-extras-media-codecs) 🎥
-    - [Install Preload](#install-preload) 🚀
-    - [Minimize to Click](#minimize-to-click) 👇
-14. [File Sorting](#file-sorting) 📂
-15. [System Maintenance](#system-maintenance) 🧹
-16. [Improve Laptop Battery](#improve-laptop-battery) 🔋
-17. [Enable/Disable Bluetooth on Startup](#enable-disable-bluetooth-on-startup) 🎧
-18. [Enable/Disable Wi-Fi on Startup](#enable-disable-wi-fi-on-startup) 📡
-19. [Alarm Clock](#alarm-clock) ⏰
-20. [Browsers](#browsers) 🌐
-    - [Firefox Setup](#firefox-setup) 🦊
-    - [Firefox Developer Edition](#firefox-developer-edition) 🦊
-21. [Cleaning Tools](#cleaning-tools) 🧼
-    - [BleachBit](#bleachbit) 🧽
-22. [Update & Upgrade](#update-upgrade) 🔄
-23. [Installing Applications](#installing-applications) 📦
-    - [Android Studio Setup](#android-studio-setup) 📱
-    - [Tor Browser](#tor-browser) 🔒
-    - [Favorite Apps (VLC, GIMP, GNOME Partition Editor)](#favorite-apps-vlc-gimp-gnome-partition-editor) 🖼️
-    - [AnyDesk on Ubuntu 22.04](#anydesk-on-ubuntu-2204) 💻
-    - [Node.js and Angular Setup](#nodejs-and-angular-setup) ⚙️
-24. [Uninstalling Applications](#uninstalling-applications) 📦
-    - [Uninstall AnyDesk from Ubuntu](#uninstall-anydesk-from-ubuntu) 💻
-    - [Uninstalling Node.js](#uninstalling-nodejs) ⚙️
-    - [Uninstalling Android Studio](#uninstalling-android-studio) 📱
-25. [End of Guide](#end-of-guide-) 📚
+1. [Setting Up a New "Dub" File](#1-setting-up-a-new-dub-file-📁) 📁
+2. [Zsh Setup](#2-zsh-setup-🖥️) 🖥️
+3. [Enable Plugins](#3-enable-plugins-🔌) 🔌
+4. [Enable Auto-suggestions](#4-enable-auto-suggestions-🤖) 🤖
+5. [Enable Syntax Highlighting](#5-enable-syntax-highlighting-🌈) 🌈
+6. [Customize with Powerlevel10k Theme](#6-customize-with-powerlevel10k-theme-🎨) 🎨
+7. [Change Default Shell to Zsh on Ubuntu](#7-change-default-shell-to-zsh-on-ubuntu-🔄) 🔄
+8. [Auto-completion Options](#8-auto-completion-options-⌨️) ⌨️
+9. [Use History](#9-use-history-🕒) 🕒
+10. [Zsh Dracula Theme](#10-zsh-dracula-theme-🧛‍♂️) 🧛‍♂️
+11. [Package Managers](#11-package-managers-📦) 📦
+    - [Synaptic Package Manager](#synaptic-package-manager-🖥️‍🔍) 🖥️‍🔍
+    - [Flatpak](#flatpak-📦) 📦
+12. [Basic](#12-basic-⚙️) ⚙️
+    - [Fully Charged Notification](#fully-charged-notification-🔋) 🔋
+    - [Low Battery Notification](#low-battery-notification-🔋) 🔋
+    - [Gnome Shell Integration](#gnome-shell-integration-🐚) 🐚
+13. [Installing Utilities](#13-installing-utilities-🛠️) 🛠️
+    - [Install Ubuntu Restricted Extras](#install-ubuntu-restricted-extras-media-codecs-🎥) 🎥
+    - [Install Preload](#install-preload-🚀) 🚀
+    - [Minimize to Click](#minimize-to-click-👇) 👇
+14. [File Sorting](#14-file-sorting-📂) 📂
+15. [System Maintenance](#15-system-maintenance-cleaning-🧹) 🧹
+16. [Improve Laptop Battery](#16-improve-laptop-battery-🔋) 🔋
+17. [Enable/Disable Bluetooth on Startup](#17-enabledisable-bluetooth-on-startup-🎧) 🎧
+18. [Enable/Disable Wi-Fi on Startup](#18-enabledisable-wi-fi-on-startup-📡) 📡
+19. [Browsers](#20-browsers-🌐) 🌐
+    - [Firefox Setup](#firefox-setup-🦊) 🦊
+    - [Firefox Developer Edition](#firefox-developer-edition-🦊) 🦊
+20. [Cleaning Tools](#21-cleaning-tools-🧼) 🧼
+    - [BleachBit](#bleachbit-🧽) 🧽
+21. [Update & Upgrade](#22-update--upgrade-🔄) 🔄
+22. [Installing Applications](#23-installing-applications-📦) 📦
+    - [Android Studio Setup](#android-studio-setup-📱) 📱
+    - [Tor Browser](#tor-browser-🔒) 🔒
+    - [Favorite Apps (VLC, GIMP, GNOME Partition Editor)](#favorite-apps-vlc-gimp-gnome-partition-editor-🖼️) 🖼️
+    - [Node.js and Angular Setup](#nodejs--react-and-angular-setup-⚙️) ⚙️
+23. [Uninstalling Applications](#24-uninstalling-applications) 📦
+    - [Uninstalling Node.js](#uninstalling-nodejs-⚙️) ⚙️
+    - [Uninstalling Android Studio](#uninstalling-android-studio-📱) 📱
+24. [End of Guide](#25-end-of-guide-📚) 📚
 
 ---
 
