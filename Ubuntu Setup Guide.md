@@ -3,134 +3,45 @@
 **Index:**
 
 1. [Setting Up a New "Dub" File](#1-setting-up-a-new-dub-file-📁) 📁
-2. [Zsh Setup](#2-zsh-setup-🖥️) 🖥️
-3. [Enable Plugins](#3-enable-plugins-🔌) 🔌
-4. [Enable Auto-suggestions](#4-enable-auto-suggestions-🤖) 🤖
-5. [Enable Syntax Highlighting](#5-enable-syntax-highlighting-🌈) 🌈
-6. [Customize with Powerlevel10k Theme](#6-customize-with-powerlevel10k-theme-🎨) 🎨
-7. [Change Default Shell to Zsh on Ubuntu](#7-change-default-shell-to-zsh-on-ubuntu-🔄) 🔄
-8. [Auto-completion Options](#8-auto-completion-options-⌨️) ⌨️
-9. [Use History](#9-use-history-🕒) 🕒
-10. [Zsh Dracula Theme](#10-zsh-dracula-theme-🧛‍♂️) 🧛‍♂️
-11. [Package Managers](#11-package-managers-📦) 📦
+2.  [Package Managers](#2-package-managers-📦) 📦
     - [Synaptic Package Manager](#synaptic-package-manager-🖥️‍🔍) 🖥️‍🔍
     - [Flatpak](#flatpak-📦) 📦
-12. [Basic](#12-basic-⚙️) ⚙️
+3.  [Basic](#3-basic-⚙️) ⚙️
     - [Fully Charged Notification](#fully-charged-notification-🔋) 🔋
     - [Low Battery Notification](#low-battery-notification-🔋) 🔋
     - [Gnome Shell Integration](#gnome-shell-integration-🐚) 🐚
-13. [Installing Utilities](#13-installing-utilities-🛠️) 🛠️
+4.  [Installing Utilities](#4-installing-utilities-🛠️) 🛠️
     - [Install Ubuntu Restricted Extras](#install-ubuntu-restricted-extras-media-codecs-🎥) 🎥
     - [Install Preload](#install-preload-🚀) 🚀
     - [Minimize to Click](#minimize-to-click-👇) 👇
-14. [File Sorting](#14-file-sorting-📂) 📂
-15. [System Maintenance](#15-system-maintenance-cleaning-🧹) 🧹
-16. [Improve Laptop Battery](#16-improve-laptop-battery-🔋) 🔋
-17. [Enable/Disable Bluetooth on Startup](#17-enabledisable-bluetooth-on-startup-🎧) 🎧
-18. [Enable/Disable Wi-Fi on Startup](#18-enabledisable-wi-fi-on-startup-📡) 📡
-19. [Browsers](#20-browsers-🌐) 🌐
+5.  [File Sorting](#5-file-sorting-📂) 📂
+6.  [System Maintenance](#6-system-maintenance-cleaning-🧹) 🧹
+7.  [Improve Laptop Battery](#7-improve-laptop-battery-🔋) 🔋
+8.  [Enable/Disable Bluetooth on Startup](#8-enabledisable-bluetooth-on-startup-🎧) 🎧
+9.  [Enable/Disable Wi-Fi on Startup](#9-enabledisable-wi-fi-on-startup-📡) 📡
+10. [Browsers](#10-browsers-🌐) 🌐
     - [Firefox Setup](#firefox-setup-🦊) 🦊
     - [Firefox Developer Edition](#firefox-developer-edition-🦊) 🦊
-20. [Cleaning Tools](#21-cleaning-tools-🧼) 🧼
+11. [Cleaning Tools](#11-cleaning-tools-🧼) 🧼
     - [BleachBit](#bleachbit-🧽) 🧽
-21. [Update & Upgrade](#22-update--upgrade-🔄) 🔄
-22. [Installing Applications](#23-installing-applications-📦) 📦
+12. [Update & Upgrade](#12-update--upgrade-🔄) 🔄
+13. [Installing Applications](#23-installing-applications-📦) 📦
     - [Android Studio Setup](#android-studio-setup-📱) 📱
     - [Tor Browser](#tor-browser-🔒) 🔒
     - [Favorite Apps (VLC, GIMP, GNOME Partition Editor)](#favorite-apps-vlc-gimp-gnome-partition-editor-🖼️) 🖼️
+    - [Anaconda Setup](#anaconda-setup-⚙️)⚙️
     - [Node.js and Angular Setup](#nodejs--react-and-angular-setup-⚙️) ⚙️
-23. [Uninstalling Applications](#24-uninstalling-applications) 📦
+14. [Uninstalling Applications](#14-uninstalling-applications) 📦
     - [Uninstalling Node.js](#uninstalling-nodejs-⚙️) ⚙️
     - [Uninstalling Android Studio](#uninstalling-android-studio-📱) 📱
-24. [End of Guide](#25-end-of-guide-📚) 📚
+15. [End of Guide](#15-end-of-guide-📚) 📚
 
 ---
 
 ## 1. Setting Up a New "Dub" File 📁
 Right-click the file and open with "Software Installer". Click the "Install" button.
 
-## 2. Zsh Setup 🖥️
-(https://itsfoss.com/zsh-ubuntu/)
-```bash
-sudo apt update
-sudo apt install zsh git fonts-font-awesome
-zsh
-(then , press option 0)
-sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-(then , press 'n')
-```
-
-## 3. Enable Plugins 🔌
-```bash
-cd ~/.oh-my-zsh/plugins
-ls
-```
-(To enable plugins in Oh My Zsh, you need to add the name of the plugin to the list of plugins in your "~/.zshrc" file.)
-
-## 4. Enable Auto-suggestions 🤖
-```bash
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-```
-
-## 5. Enable Syntax Highlighting 🌈
-```bash
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-nano ~/.zshrc
-(add this in plugins)
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
-```
-
-## 6. Customize with Powerlevel10k Theme 🎨
-```bash
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-nano ~/.zshrc
-ZSH_THEME="powerlevel10k/powerlevel10k"
-zsh
-(Once you answer all the questions, it will get you into prompt style selections where you have to choose how you want your terminal to look like)
-(go with this Verbose option)
-(press Y)
-(you can reconfigure using this command : "p10k configure")
-```
-
-## 7. Change Default Shell to Zsh on Ubuntu 🔄
-(To change your default login shell, first, execute the given command)
-```bash
-chsh
-(And to change your default shell, enter the following path of Zsh and press enter:)
-/bin/zsh
-```
-
-## 8. Auto-completion Options ⌨️
-(Open ".zshrc" file and add this line's at end of file)
-```bash
-# Basic auto/tab complete
-autoload -U compinit
-zstyle ':completion:*' menu select
-zmodload zsh/complist
-setopt extendedglob
-_comp_options+=(globdots)
-
-```
-
-## 9. Use History 🕒
-(Open ".zshrc" file and add this line's at end of file)
-```bash
-# For History
-HISTSIZE=10000
-SAVEHIST=10000
-setopt appendhistory
-setopt INC_APPEND_HISTORY
-setopt SHARE_HISTORY
-```
-
-## 10. Zsh Dracula Theme 🧛‍♂️
-(https://draculatheme.com/zsh)
-```bash
-git clone https://github.com/dracula/zsh.git
-ln -s dracula.zsh-theme/dracula.zsh-theme .oh-my-zsh/themes/dracula.zsh-theme
-```
-
-## 11. Package Managers 📦
+## 2. Package Managers 📦
 
 ### Synaptic Package Manager 🖥️‍🔍
 ```bash
@@ -149,7 +60,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 - go to this website : https://flathub.org/
 
 
-## 12. Basic ⚙️
+## 3. Basic ⚙️
 
 ### Fully Charged Notification 🔋
 ```bash
@@ -182,7 +93,7 @@ sudo nano UPower.conf
 sudo apt install gnome-shell-extensions
 ```
 
-## 13. Installing Utilities 🛠️
+## 4. Installing Utilities 🛠️
 
 ### Install Ubuntu Restricted Extras (Media Codecs) 🎥
 ```bash
@@ -199,23 +110,23 @@ sudo apt install preload
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 ```
 
-## 14. File Sorting 📂
+## 5. File Sorting 📂
 ```bash
 gsettings set org.gnome.nautilus.preferences default-sort-order 'type'
 ```
 
-## 15. System Maintenance [cleaning] 🧹
+## 6. System Maintenance [cleaning] 🧹
 ```bash
 sudo apt autoremove
 ```
 
-## 16. Improve Laptop Battery 🔋
+## 7. Improve Laptop Battery 🔋
 ```bash
 sudo apt install tlp tlp-rdw
 ```
 - Just run the above command and you don’t need to do anything else. It’ll make your laptop battery last longer by implementing some power-saving protocols.
 
-## 17. Enable/Disable Bluetooth on Startup 🎧
+## 8. Enable/Disable Bluetooth on Startup 🎧
 ```bash
 sudo systemctl disable bluetooth.service
 sudo systemctl status bluetooth.service
@@ -225,13 +136,13 @@ sudo systemctl status bluetooth.service
 sudo service bluetooth start
 ```
 
-## 18. Enable/Disable Wi-Fi on Startup 📡
+## 9. Enable/Disable Wi-Fi on Startup 📡
 ```bash
 nmcli radio wifi on
 nmcli radio wifi off
 ```
 
-## 20. Browsers 🌐
+## 10. Browsers 🌐
 
 ### Firefox Setup 🦊
 - https://support.mozilla.org/en-US/kb/install-firefox-linux
@@ -252,20 +163,20 @@ snap install ubuntu-make --classic
 umake web firefox-dev
 ```
 
-## 21. Cleaning Tools 🧼
+## 11. Cleaning Tools 🧼
 
 ### BleachBit 🧽
 ```bash
 sudo apt install bleachbit
 ```
 
-## 22. Update & Upgrade 🔄
+## 12. Update & Upgrade 🔄
 ```bash
 sudo apt update && sudo apt upgrade
 sudo apt-get update
 ```
 
-## 23. Installing Applications 📦
+## 13. Installing Applications 📦
 
 ### Android Studio Setup 📱
 ```bash
@@ -325,6 +236,70 @@ chmod a+x ~/Desktop/start-tor-browser.desktop
 sudo apt install vlc gimp gparted
 ```
 
+---
+
+### Anaconda Setup ⚙️
+
+- To install Anaconda on Ubuntu, follow these steps:
+
+1. **Update System**: Open a terminal and update your system's package list:
+
+   ```bash
+   sudo apt update
+   sudo apt install curl
+   sudo apt-get install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
+   ```
+
+2. **Download Anaconda**: Open a terminal window and visit the [Anaconda download page](https://www.anaconda.com/products/distribution) to get the link for the latest version of Anaconda for Linux.
+
+3. **Download using `wget`**: In the terminal, use the `wget` command to download the installer. Replace the link below with the actual link you obtained from the Anaconda website.
+
+   ```bash
+   wget https://repo.anaconda.com/archive/Anaconda3-<version>-Linux-x86_64.sh
+   ```
+
+4. **Install Anaconda**: Run the downloaded shell script to install Anaconda. Replace `<version>` with the actual version you downloaded.
+
+   ```bash
+   bash Anaconda3-<version>-Linux-x86_64.sh
+   ```
+
+5. **Follow the installer prompts**: You'll see some license terms. Scroll through and press `Enter` to continue. You'll be asked to review the license terms, and then prompted to choose the installation location. Press `Enter` to install in the default location or specify a different location.
+
+6. **Initialize Anaconda**: After installation, the installer will ask if you want to initialize Anaconda by running `conda init`. It's a good idea to say yes:
+
+   ```bash
+   source ~/.bashrc
+   ```
+
+   Alternatively, you can use `source ~/.bash_profile` if you're using the Bash shell.
+
+7. **Test Anaconda**: You can now test if Anaconda is installed by running:
+
+   ```bash
+   conda --version
+   ```
+
+   This should display the version of conda installed.
+
+8. **Update Anaconda**: It's a good practice to update Anaconda after installation:
+
+   ```bash
+   conda update --all
+   ```
+
+9. **Launch Anaconda Navigator**: To use the Anaconda Navigator GUI, you can launch it from the terminal:
+
+   ```bash
+   anaconda-navigator
+   ```
+
+**Note:**
+- Remember to replace `<version>` with the actual version of Anaconda you downloaded.
+- Once Anaconda is installed, you can create and manage environments, install packages, and work with data science tools using the Anaconda Navigator GUI or the command-line interface (`conda`).
+
+---
+
 ### Node.js , React and Angular Setup ⚙️
 
 **Installing Node.Js :**
@@ -349,7 +324,7 @@ ng version
 
 ```
 
-## 24. Uninstalling Applications
+## 14. Uninstalling Applications
 
 ### Uninstalling Node.js ⚙️
 ```bash
@@ -364,6 +339,6 @@ sudo rm -rf /opt/android-studio
 rm -rf ~/android-studio-2022.1.1.21-linux.tar.gz
 ```
 
-## 25. End of Guide 📚
+## 15. End of Guide 📚
 
 ---
