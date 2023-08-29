@@ -148,7 +148,7 @@ nmcli radio wifi off
 - https://support.mozilla.org/en-US/kb/install-firefox-linux
 
 - Frist Go to Offical Site of Firefox and Download ".bz2" File
-- 
+
 ```bash
 cd ~/Downloads
 tar xjf firefox-*.tar.bz2
@@ -293,6 +293,44 @@ sudo apt install vlc gimp gparted
    ```bash
    anaconda-navigator
    ```
+
+10. [Create Anaconda Navigator Desktop Shortcut on Linux] (https://linux.how2shout.com/create-anaconda-navigator-desktop-shortcut-ubuntu-20-04-18-04/)
+
+**Step 1**: Open the **command terminal** on your Ubuntu 20.04 LTS or any other Linux system you are using.
+
+**Step 2**: Switch to the Desktop directory by using the command: `cd Desktop`
+
+**Step 3**: Now create a file for the **Anaconda Desktop shortcut**, for that we are using the default nano editor of Ubuntu Linux.
+
+``` bash
+nano anaconda.desktop
+```
+
+**Step 4**: You will see a text editor, where copy-paste the following text:
+
+```bash
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Anaconda
+Exec=/home/<username>/anaconda3/bin/anaconda-navigator
+Icon=/home/<username>/anaconda3/lib/python3.8/site-packages/anaconda_navigator/app/icons/Icon1024.png
+Terminal=false
+```
+
+**Step 5**: The things you have to change in the above-given text are the directories for the **Exec** and **Icon** values. If you have used the **default home** directory for the **Anaconda3** installation then just replace the **<username>** with your Ubuntu Linux **username** that you can easily find on the Command terminal given before the @. Otherwise, just replace the /home/<username> with the directory path where the folder of anaconda3 you have placed. Also, don’t forget to replace the **python version** with your system default one. Here it is **3.8** and can be different in your case.
+
+**Step 6**: Save the file by pressing **Ctrl+X** and then **Y** followed by the **Enter** Key.
+
+**Step 7**: Now, you will see an icon on the Desktop for Anaconda, right-click on it, and select the option “**Allow Launching**“. This will turn the gear-looking icon into the **Anaconda Navigator** one. That’s it you are done!
+
+![Allow Launhing the Desktop Shortcut Ubuntu 20.04](https://www.how2shout.com/linux/wp-content/uploads/2020/08/Allow-Launhing-the-Desktop-Shortcut-Ubuntu.jpg)
+``
+![Anaconda Navigator Desktop Shortcut on Ubuntu Linux](https://www.how2shout.com/linux/wp-content/uploads/2020/08/Anaconda-Navigator-Desktop-Shortcut-on-Ubuntu-Linux.jpg)
+
+**Trivia**: The path of the anaconda-navigator executable file.
+
+![Anaconda Navigator Installation directory](https://www.how2shout.com/linux/wp-content/uploads/2020/08/Anaconda-Navigator-Installation-directory.jpg)
 
 **Note:**
 - Remember to replace `<version>` with the actual version of Anaconda you downloaded.
