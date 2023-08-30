@@ -30,10 +30,12 @@
     - [Tor Browser](#tor-browser-🔒) 🔒
     - [Favorite Apps (VLC, GIMP, GNOME Partition Editor)](#favorite-apps-vlc-gimp-gnome-partition-editor-🖼️) 🖼️
     - [Anaconda Setup](#anaconda-setup-⚙️)⚙️
+    - [PyCharm Community Edition](#pycharm-community-edition-🐍)🐍
     - [Node.js and Angular Setup](#nodejs--react-and-angular-setup-⚙️) ⚙️
-14. [Uninstalling Applications](#14-uninstalling-applications) 📦
+14. [Uninstalling Applications](#14-uninstalling-applications-🗑️) 🗑️
     - [Uninstalling Node.js](#uninstalling-nodejs-⚙️) ⚙️
     - [Uninstalling Android Studio](#uninstalling-android-studio-📱) 📱
+    - [Uninstalling PyCharm Community Edition](#uninstalling-pycharm-community-edition-📦) 📦
 15. [End of Guide](#15-end-of-guide-📚) 📚
 
 ---
@@ -338,6 +340,51 @@ Terminal=false
 
 ---
 
+### PyCharm Community Edition 🐍
+
+To download and install **PyCharm Community Edition** on Ubuntu, you can follow these steps:
+
+1. **Download PyCharm:**
+   Open a web browser and go to the official PyCharm download page: https://www.jetbrains.com/pycharm/download/
+   
+   On this page, you'll see options for both the Community Edition and the Professional Edition. Make sure to select the **Community** tab to download the free Community Edition.
+
+2. **Download the Linux Tarball:**
+   On the Community Edition section, click the "Download" button for the Linux version. This will download a `.tar.gz` archive file.
+
+3. **Extract the Archive:**
+   Once the download is complete, open a terminal and navigate to the directory where the downloaded archive is located. Use the `cd` command to navigate to the directory. For example:
+
+   ```bash
+   cd ~/Downloads
+   ```
+
+   Then, extract the downloaded archive using the following command (replace `pycharm-community-XXXX.X.X` with the actual version you downloaded):
+
+   ```bash
+   tar -xvf pycharm-community-XXXX.X.X.tar.gz
+   ```
+
+4. **Install PyCharm:**
+   After extracting the archive, navigate into the extracted directory:
+
+   ```bash
+   cd pycharm-community-XXXX.X.X
+   ```
+
+   Inside this directory, you'll find the PyCharm executable file. To run PyCharm, execute the `bin/pycharm.sh` script:
+
+   ```bash
+   ./bin/pycharm.sh
+   ```
+
+   This will launch PyCharm Community Edition.
+
+5. **Initial Setup:**
+   When you launch PyCharm for the first time, you might be prompted to import settings from a previous installation or choose the default settings. Follow the on-screen instructions to set up PyCharm according to your preferences.
+
+---
+
 ### Node.js , React and Angular Setup ⚙️
 
 **Installing Node.Js :**
@@ -362,7 +409,7 @@ ng version
 
 ```
 
-## 14. Uninstalling Applications
+## 14. Uninstalling Applications 🗑️
 
 ### Uninstalling Node.js ⚙️
 ```bash
@@ -376,6 +423,51 @@ sudo rm -r /usr/bin/android-studio
 sudo rm -rf /opt/android-studio
 rm -rf ~/android-studio-2022.1.1.21-linux.tar.gz
 ```
+
+### Uninstalling PyCharm Community Edition 📦
+
+If you decide to uninstall **PyCharm Community Edition** from your Ubuntu system, you can follow these steps:
+
+1. **Remove the Installation Directory:**
+   Open a terminal and navigate to the directory where PyCharm Community Edition is installed. By default, it's often located in your home directory. Use the `cd` command to navigate to the directory:
+
+   ```bash
+   cd ~/pycharm-community-XXXX.X.X
+   ```
+
+   Replace `XXXX.X.X` with the version number you installed.
+
+2. **Delete the Installation Directory:**
+   Once you're in the installation directory, you can remove it using the `rm` command. Be careful, as this will permanently delete the PyCharm installation:
+
+   ```bash
+   rm -r ~/pycharm-community-XXXX.X.X
+   ```
+
+3. **Remove the Desktop Entry:**
+   If you added a desktop entry for PyCharm, you can remove it using the following command:
+
+   ```bash
+   rm ~/.local/share/applications/jetbrains-pycharm-ce.desktop
+   ```
+
+4. **Remove Configuration Files (Optional):**
+   If you want to remove any configuration files associated with PyCharm, you can delete the `~/.config/JetBrains` directory:
+
+   ```bash
+   rm -r ~/.config/JetBrains
+   ```
+
+5. **Remove User Settings (Optional):**
+   If you want to remove PyCharm's user-specific settings, you can delete the `~/.PyCharmXXXX.X` directory:
+
+   ```bash
+   rm -r ~/.PyCharmXXXX.X
+   ```
+
+   Replace `XXXX.X` with the version number.
+
+These steps should remove PyCharm Community Edition and its associated files from your system. Please exercise caution when deleting files, and make sure you have backups if necessary.
 
 ## 15. End of Guide 📚
 
