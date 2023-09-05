@@ -3,22 +3,22 @@
 **Index:**
 
 1. [Setting Up a New "Dub" File](#1-setting-up-a-new-dub-file-📁) 📁
-2.  [Package Managers](#2-package-managers-📦) 📦
-    - [Synaptic Package Manager](#synaptic-package-manager-🖥️‍🔍) 🖥️‍🔍
-    - [Flatpak](#flatpak-📦) 📦
-3.  [Basic](#3-basic-⚙️) ⚙️
-    - [Fully Charged Notification](#fully-charged-notification-🔋) 🔋
-    - [Low Battery Notification](#low-battery-notification-🔋) 🔋
-    - [Gnome Shell Integration](#gnome-shell-integration-🐚) 🐚
-4.  [Installing Utilities](#4-installing-utilities-🛠️) 🛠️
-    - [Install Ubuntu Restricted Extras](#install-ubuntu-restricted-extras-media-codecs-🎥) 🎥
-    - [Install Preload](#install-preload-🚀) 🚀
-    - [Minimize to Click](#minimize-to-click-👇) 👇
-5.  [File Sorting](#5-file-sorting-📂) 📂
-6.  [System Maintenance](#6-system-maintenance-cleaning-🧹) 🧹
-7.  [Improve Laptop Battery](#7-improve-laptop-battery-🔋) 🔋
-8.  [Enable/Disable Bluetooth on Startup](#8-enabledisable-bluetooth-on-startup-🎧) 🎧
-9.  [Enable/Disable Wi-Fi on Startup](#9-enabledisable-wi-fi-on-startup-📡) 📡
+2. [Package Managers](#2-package-managers-📦) 📦
+   - [Synaptic Package Manager](#synaptic-package-manager-🖥️‍🔍) 🖥️‍🔍
+   - [Flatpak](#flatpak-📦) 📦
+3. [Basic](#3-basic-⚙️) ⚙️
+   - [Fully Charged Notification](#fully-charged-notification-🔋) 🔋
+   - [Low Battery Notification](#low-battery-notification-🔋) 🔋
+   - [Gnome Shell Integration](#gnome-shell-integration-🐚) 🐚
+4. [Installing Utilities](#4-installing-utilities-🛠️) 🛠️
+   - [Install Ubuntu Restricted Extras](#install-ubuntu-restricted-extras-media-codecs-🎥) 🎥
+   - [Install Preload](#install-preload-🚀) 🚀
+   - [Minimize to Click](#minimize-to-click-👇) 👇
+5. [File Sorting](#5-file-sorting-📂) 📂
+6. [System Maintenance](#6-system-maintenance-cleaning-🧹) 🧹
+7. [Improve Laptop Battery](#7-improve-laptop-battery-🔋) 🔋
+8. [Enable/Disable Bluetooth on Startup](#8-enabledisable-bluetooth-on-startup-🎧) 🎧
+9. [Enable/Disable Wi-Fi on Startup](#9-enabledisable-wi-fi-on-startup-📡) 📡
 10. [Browsers](#10-browsers-🌐) 🌐
     - [Firefox Setup](#firefox-setup-🦊) 🦊
     - [Firefox Developer Edition](#firefox-developer-edition-🦊) 🦊
@@ -30,12 +30,13 @@
     - [Tor Browser](#tor-browser-🔒) 🔒
     - [Favorite Apps (VLC, GIMP, GNOME Partition Editor)](#favorite-apps-vlc-gimp-gnome-partition-editor-🖼️) 🖼️
     - [Anaconda Setup](#anaconda-setup-⚙️)⚙️
-    - [PyCharm Community Edition Installation and Desktop Shortcut](#pycharm-community-edition-installation-and-desktop-shortcut-🐍🌄)🐍🌄
+    - [PyCharm Community Edition](#pycharm-community-edition)
     - [Node.js and Angular Setup](#nodejs--react-and-angular-setup-⚙️) ⚙️
-14. [Uninstalling Applications](#14-uninstalling-applications-🗑️) 🗑️
+    - [Installing TensorFlow on Ubuntu](#installing-tensorflow-on-ubuntu-🧠) 🧠
+14. [Uninstalling Applications](#14-uninstalling-applications) 📦
     - [Uninstalling Node.js](#uninstalling-nodejs-⚙️) ⚙️
     - [Uninstalling Android Studio](#uninstalling-android-studio-📱) 📱
-    - [Uninstalling PyCharm Community Edition](#uninstalling-pycharm-community-edition-🐍) 🐍
+    - [Uninstalling PyCharm Community Edition](#uninstalling-pycharm-community-edition-📦) 📦
 15. [End of Guide](#15-end-of-guide-📚) 📚
 
 ---
@@ -433,6 +434,61 @@ ng version
 ```bash
 
 ```
+
+### Installing TensorFlow on Ubuntu 🧠
+
+To empower your Ubuntu system with the capabilities of TensorFlow, follow these steps:
+
+**1. 🖥️ Open a Terminal:**
+
+   Begin your journey by summoning the terminal on your Ubuntu system. Press `Ctrl` + `Alt` + `T` to open the gateway to the command-line world.
+
+**2. 🌐 Create a Virtual Environment (Optional):**
+
+   While not mandatory, creating a virtual environment is a wise move to keep your TensorFlow installation isolated. To craft one, employ the mystical powers of `virtualenv`:
+
+   ```bash
+   sudo apt install python3-venv  # Harness the power of virtualenv
+   python3 -m venv tensorflow-env  # Forge a virtual environment
+   source tensorflow-env/bin/activate  # Awaken the virtual guardian
+   ```
+
+   Activating the virtual environment ensures that TensorFlow and its allies are confined within this realm.
+
+**3. 🚀 Install TensorFlow:**
+
+   With your virtual environment standing by (or without it if you prefer), you can beckon TensorFlow into your Ubuntu realm using the trusty `pip`. For CPU aficionados:
+
+   ```bash
+   pip install tensorflow
+   ```
+
+   But if you possess a compatible NVIDIA GPU and seek the accelerated might of TensorFlow with GPU support:
+
+   ```bash
+   pip install tensorflow-gpu
+   ```
+
+   Watch as the command conjures TensorFlow and its loyal comrades, bringing their powers to your aid.
+
+**4. ✅ Verify the Installation:**
+
+   To ensure that TensorFlow has taken its rightful place in your domain, open a Python shell by uttering the incantation `python` in your terminal. Then, recite the following spell:
+
+   ```python
+   import tensorflow as tf
+   print(tf.__version__)
+   ```
+
+   Witness as the version number of TensorFlow emerges, confirming its presence and readiness.
+
+**5. ♻️ Deactivate Virtual Environment (Optional):**
+
+   If you summoned a virtual environment in step 2 and your quest with TensorFlow is complete, you can bid it farewell by running:
+
+   ```bash
+   deactivate
+   ```
 
 ## 14. Uninstalling Applications 🗑️
 
