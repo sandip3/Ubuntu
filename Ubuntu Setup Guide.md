@@ -30,6 +30,7 @@
     - [Tor Browser](#tor-browser-🔒) 🔒
     - [Favorite Apps (VLC, GIMP, GNOME Partition Editor)](#favorite-apps-vlc-gimp-gnome-partition-editor-🖼️) 🖼️
     - [Anaconda Setup](#anaconda-setup-⚙️)⚙️
+    - [Thonny](#thonny-installation-🐍)🐍
     - [PyCharm Community Edition](#pycharm-community-edition)
     - [Node.js and Angular Setup](#nodejs--react-and-angular-setup-⚙️) ⚙️
     - [Installing TensorFlow on Ubuntu](#installing-tensorflow-on-ubuntu-🧠) 🧠
@@ -342,6 +343,11 @@ Terminal=false
 ---
 
 Absolutely, let's add even more emojis for a fun touch:
+
+### Thonny Installation 🐍
+```bash
+sudo apt install thonny
+```
 
 ### PyCharm Community Edition Installation and Desktop Shortcut 🐍🌄
 
