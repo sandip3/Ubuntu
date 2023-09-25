@@ -31,13 +31,13 @@
     - [Favorite Apps (VLC, GIMP, GNOME Partition Editor)](#favorite-apps-vlc-gimp-gnome-partition-editor-🖼️) 🖼️
     - [Anaconda Setup](#anaconda-setup-⚙️)⚙️
     - [Thonny](#thonny-installation-🐍)🐍
-    - [PyCharm Community Edition](#pycharm-community-edition)
+    - [PyCharm Community Edition](#pycharm-community-edition-🐍🌄)
     - [Node.js and Angular Setup](#nodejs--react-and-angular-setup-⚙️) ⚙️
     - [Installing TensorFlow on Ubuntu](#installing-tensorflow-on-ubuntu-🧠) 🧠
 14. [Uninstalling Applications](#14-uninstalling-applications) 📦
     - [Uninstalling Node.js](#uninstalling-nodejs-⚙️) ⚙️
     - [Uninstalling Android Studio](#uninstalling-android-studio-📱) 📱
-    - [Uninstalling PyCharm Community Edition](#uninstalling-pycharm-community-edition-📦) 📦
+    - [Uninstalling PyCharm Community Edition](#uninstalling-pycharm-community-edition-🐍) 🐍
 15. [End of Guide](#15-end-of-guide-📚) 📚
 
 ---
@@ -49,26 +49,25 @@ Right-click the file and open with "Software Installer". Click the "Install" but
 
 ### Synaptic Package Manager 🖥️‍🔍
 ```bash
-sudo apt install synaptic
+sudo apt install synaptic -y
 ```
 
 ### Flatpak 📦
 ```bash
-sudo add-apt-repository ppa:flatpak/stable
-sudo apt update
-sudo apt install flatpak
-sudo apt install gnome-software-plugin-flatpak
+sudo add-apt-repository ppa:flatpak/stable -y
+sudo apt update -y
+sudo apt install flatpak -y
+sudo apt install gnome-software-plugin-flatpak -y
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
-- Restart the pc 
-- go to this website : https://flathub.org/
-
+- Restart the PC 
+- Go to this website: https://flathub.org/
 
 ## 3. Basic ⚙️
 
 ### Fully Charged Notification 🔋
 ```bash
-sudo apt-get install acpi
+sudo apt-get install acpi -y
 git clone https://github.com/hg8/battery-full-notification.git
 cd battery-full-notification/
 chmod +x batteryfull.sh
@@ -77,11 +76,13 @@ sudo cp batteryfull.sh /usr/local/bin
 ```
 - Add this file to Startup Applications :
 ```
-Name : Battry Full Notification
+Name : Battery Full Notification
 Command : /home/sandy/battery-full-notification/batteryfull.sh
-Comment : Display a notification when battry is full
+Comment : Display a notification when battery is full
 ```
+
 ---
+
 ### Low Battery Notification 🔋
 ```bash
 cd /etc/UPower
@@ -91,22 +92,21 @@ sudo nano UPower.conf
 ```
 - Press "Ctrl + X" and save
 
-
 ### Gnome Shell Integration 🐚
 ```bash
-sudo apt install gnome-shell-extensions
+sudo apt install gnome-shell-extensions -y
 ```
 
 ## 4. Installing Utilities 🛠️
 
 ### Install Ubuntu Restricted Extras (Media Codecs) 🎥
 ```bash
-sudo apt install ubuntu-restricted-extras
+sudo apt install ubuntu-restricted-extras -y
 ```
 
 ### Install Preload 🚀
 ```bash
-sudo apt install preload
+sudo apt install preload -y
 ```
 
 ### Minimize to Click 👇
@@ -121,14 +121,14 @@ gsettings set org.gnome.nautilus.preferences default-sort-order 'type'
 
 ## 6. System Maintenance [cleaning] 🧹
 ```bash
-sudo apt autoremove
+sudo apt autoremove -y
 ```
 
 ## 7. Improve Laptop Battery 🔋
 ```bash
-sudo apt install tlp tlp-rdw
+sudo apt install tlp tlp-rdw -y
 ```
-- Just run the above command and you don’t need to do anything else. It’ll make your laptop battery last longer by implementing some power-saving protocols.
+- Just run the above command, and you don’t need to do anything else. It’ll make your laptop battery last longer by implementing some power-saving protocols.
 
 ## 8. Enable/Disable Bluetooth on Startup 🎧
 ```bash
@@ -151,7 +151,7 @@ nmcli radio wifi off
 ### Firefox Setup 🦊
 - https://support.mozilla.org/en-US/kb/install-firefox-linux
 
-- Frist Go to Offical Site of Firefox and Download ".bz2" File
+- First Go to the Official Site of Firefox and Download ".bz2" File
 
 ```bash
 cd ~/Downloads
@@ -171,34 +171,34 @@ umake web firefox-dev
 
 ### BleachBit 🧽
 ```bash
-sudo apt install bleachbit
+sudo apt install bleachbit -y
 ```
 
 ## 12. Update & Upgrade 🔄
 ```bash
-sudo apt update && sudo apt upgrade
-sudo apt-get update
+sudo apt update && sudo apt upgrade -y
+sudo apt-get update -y
 ```
 
 ## 13. Installing Applications 📦
 
 ### Android Studio Setup 📱
 ```bash
-sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
-sudo apt update
-sudo apt upgrade
-sudo apt install openjdk-18-jdk
+sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils -y
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt install openjdk-18-jdk -y
 ```
 - https://developer.android.com/studio#downloads		
-- goto this Site and Download Android Studio leteset version & unzip it 
+- Go to this Site and Download Android Studio latest version & unzip it 
 ```bash
 sudo mv android-studio /opt/
 sudo ln -sf /opt/android-studio/bin/studio.sh /bin/android-studio
 ```
-- Once you have run these commands, you will write a snippet of code to allow for the Android Studio application to be available on the application menu shortcut on Ubuntu. 
+- Once you have run these commands, you will write a snippet of code to allow the Android Studio application to be available on the application menu shortcut on Ubuntu. 
 
 `sudo nano /usr/share/applications/android-studio.desktop`
--  Add the following code snippet and save: 
+- Add the following code snippet and save: 
 
 ``` text
 [Desktop Entry]
@@ -215,8 +215,9 @@ StartupWMClass=jetbrains-android-studio
 Name[en_GB]=android-studio.desktop
 ```
 ---
+
 ### Tor Browser 🔒
-- download Tor browser file
+- Download Tor browser file
 ```bash
 cd Downloads
 tar -xvf tor-browser-linux64-*_en-US.tar.xz
@@ -237,7 +238,7 @@ chmod a+x ~/Desktop/start-tor-browser.desktop
 
 ### Favorite Apps (VLC, GIMP, GNOME Partition Editor) 🖼️
 ```bash
-sudo apt install vlc gimp gparted
+sudo apt install vlc gimp gparted -y
 ```
 
 ---
@@ -249,9 +250,9 @@ sudo apt install vlc gimp gparted
 1. **Update System**: Open a terminal and update your system's package list:
 
    ```bash
-   sudo apt update
-   sudo apt install curl
-   sudo apt-get install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
+   sudo apt update -y
+   sudo apt install curl -y
+   sudo apt-get install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6 -y
    ```
 
 2. **Download Anaconda**: Open a terminal window and visit the [Anaconda download page](https://www.anaconda.com/products/distribution) to get the link for the latest version of Anaconda for Linux.
@@ -265,7 +266,7 @@ sudo apt install vlc gimp gparted
 4. **Install Anaconda**: Run the downloaded shell script to install Anaconda. Replace `<version>` with the actual version you downloaded.
 
    ```bash
-   bash Anaconda3-<version>-Linux-x86_64.sh
+   bash Anaconda3-<version>-Linux-x86_64.sh -y
    ```
 
 5. **Follow the installer prompts**: You'll see some license terms. Scroll through and press `Enter` to continue. You'll be asked to review the license terms, and then prompted to choose the installation location. Press `Enter` to install in the default location or specify a different location.
@@ -286,10 +287,11 @@ sudo apt install vlc gimp gparted
 
    This should display the version of conda installed.
 
+
 8. **Update Anaconda**: It's a good practice to update Anaconda after installation:
 
    ```bash
-   conda update --all
+   conda update --all -y
    ```
 
 9. **Launch Anaconda Navigator**: To use the Anaconda Navigator GUI, you can launch it from the terminal:
@@ -298,7 +300,7 @@ sudo apt install vlc gimp gparted
    anaconda-navigator
    ```
 
-10. [Create Anaconda Navigator Desktop Shortcut on Linux] (https://linux.how2shout.com/create-anaconda-navigator-desktop-shortcut-ubuntu-20-04-18-04/)
+10. [Create Anaconda Navigator Desktop Shortcut on Linux](https://linux.how2shout.com/create-anaconda-navigator-desktop-shortcut-ubuntu-20-04-18-04/)
 
 **Step 1**: Open the **command terminal** on your Ubuntu 20.04 LTS or any other Linux system you are using.
 
@@ -342,11 +344,9 @@ Terminal=false
 
 ---
 
-Absolutely, let's add even more emojis for a fun touch:
-
 ### Thonny Installation 🐍
 ```bash
-sudo apt install thonny
+sudo apt install thonny -y
 ```
 
 ### PyCharm Community Edition Installation and Desktop Shortcut 🐍🌄
