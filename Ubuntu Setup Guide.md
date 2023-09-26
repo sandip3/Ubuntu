@@ -14,6 +14,7 @@
    - [Install Ubuntu Restricted Extras](#install-ubuntu-restricted-extras-media-codecs-🎥) 🎥
    - [Install Preload](#install-preload-🚀) 🚀
    - [Minimize to Click](#minimize-to-click-👇) 👇
+   - [System Optimization with Stacer](#system-optimization-with-stacer-🛠️) 🛠️
 5. [File Sorting](#5-file-sorting-📂) 📂
 6. [System Maintenance](#6-system-maintenance-cleaning-🧹) 🧹
 7. [Improve Laptop Battery](#7-improve-laptop-battery-🔋) 🔋
@@ -113,6 +114,31 @@ sudo apt install preload -y
 ```bash
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 ```
+
+### System Optimization with Stacer 🛠️
+
+#### Install Stacer 🚀
+
+Stacer is a handy system optimizer and monitoring tool for Linux. It allows you to manage various aspects of your system and keep it running smoothly.
+
+To install Stacer, open a terminal and run the following commands:
+
+```bash
+sudo add-apt-repository ppa:oguzhaninan/stacer -y
+sudo apt update -y
+sudo apt install stacer -y
+```
+
+#### Launch Stacer 🚀
+
+You can launch Stacer by searching for it in the application menu or by running the following command in the terminal:
+
+```bash
+stacer
+```
+
+Stacer will provide you with a user-friendly interface to manage and optimize your Ubuntu system.
+
 
 ## 5. File Sorting 📂
 ```bash
