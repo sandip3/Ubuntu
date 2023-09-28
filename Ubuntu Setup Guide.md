@@ -26,7 +26,9 @@
 11. [Cleaning Tools](#11-cleaning-tools-🧼) 🧼
     - [BleachBit](#bleachbit-🧽) 🧽
 12. [Update & Upgrade](#12-update--upgrade-🔄) 🔄
-13. [Installing Applications](#23-installing-applications-📦) 📦
+13. [Installing Applications](#13-installing-applications-📦) 📦
+    - [Email Client: Mozilla Thunderbird](#email-client-mozilla-thunderbird-📧) 📧
+    - [Calendar: GNOME Calendar](#calendar-gnome-calendar-🗓️) 🗓️
     - [Android Studio Setup](#android-studio-setup-📱) 📱
     - [Tor Browser](#tor-browser-🔒) 🔒
     - [Favorite Apps (VLC, GIMP, GNOME Partition Editor)](#favorite-apps-vlc-gimp-gnome-partition-editor-🖼️) 🖼️
@@ -175,9 +177,8 @@ nmcli radio wifi off
 ## 10. Browsers 🌐
 
 ### Firefox Setup 🦊
-- https://support.mozilla.org/en-US/kb/install-firefox-linux
 
-- First Go to the Official Site of Firefox and Download ".bz2" File
+- First Go to the **[Official Site](https://support.mozilla.org/en-US/kb/install-firefox-linux)** of Firefox and Download ".bz2" File
 
 ```bash
 cd ~/Downloads
@@ -187,10 +188,35 @@ sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox
 sudo wget https://raw.githubusercontent.com/mozilla/sumo-kb/main/install-firefox-linux/firefox.desktop -P /usr/local/share/applications
 ```
 
+---
+
 ### Firefox Developer Edition 🦊
+
+- First Go to the **[Official Site](https://www.mozilla.org/en-US/firefox/developer/)** of Firefox and Download ".bz2" File
+- unzip file and rename it "firefox-developer"
+
 ```bash
-snap install ubuntu-make --classic
-umake web firefox-dev
+sudo mv firefox-developer /opt
+sudo ln -s /opt/firefox-developer/firefox /usr/local/bin/firefox-developer
+cd ~/Desktop
+nano ~/.local/share/applications/firefox-developer-edition.desktop
+```
+
+- Add the following content to the `firefox-developer-edition.desktop` file
+
+```bash
+[Desktop Entry]
+Name=Firefox Developer Edition
+Comment=Web Browser
+Exec=/opt/firefox-developer/firefox %u
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/opt/firefox-developer/browser/chrome/icons/default/default128.png
+Categories=Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/vnd.mozilla.xul+xml;application/rss+xml;application/rdf+xml;image/gif;image/jpeg;image/png;x-scheme-handler/http;x-scheme-handler/https;
+StartupWMClass=Firefox Developer Edition
+StartupNotify=true
 ```
 
 ## 11. Cleaning Tools 🧼
@@ -207,6 +233,18 @@ sudo apt-get update -y
 ```
 
 ## 13. Installing Applications 📦
+
+### Email Client: Mozilla Thunderbird 📧
+
+```bash
+sudo apt install thunderbird -y
+```
+
+### Calendar: GNOME Calendar 🗓️
+
+```bash
+sudo apt install gnome-calendar -y
+```
 
 ### Android Studio Setup 📱
 ```bash
