@@ -1,5 +1,7 @@
 # 📷 OpenCV Installation Guide 📷
 
+**Source**: [How to install OpenCV for Python on Ubuntu 22.04, 20.04 or others](https://linux.how2shout.com/how-to-install-opencv-for-python-on-ubuntu-22-04-20-04-or-others/)
+
 ## Step 1: Update Ubuntu Packages
 
 ```bash
