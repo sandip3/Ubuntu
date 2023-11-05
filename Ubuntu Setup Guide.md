@@ -15,6 +15,7 @@
    - [Install Preload](#install-preload-🚀) 🚀
    - [Minimize to Click](#minimize-to-click-👇) 👇
    - [System Optimization with Stacer](#system-optimization-with-stacer-🛠️) 🛠️
+   - [Install scrcpy](#install-scrcpy-📱) 📱
 5. [File Sorting](#5-file-sorting-📂) 📂
 6. [System Maintenance](#6-system-maintenance-cleaning-🧹) 🧹
 7. [Improve Laptop Battery](#7-improve-laptop-battery-🔋) 🔋
@@ -141,6 +142,10 @@ stacer
 
 Stacer will provide you with a user-friendly interface to manage and optimize your Ubuntu system.
 
+### Install scrcpy 📱
+```bash
+sudo snap install scrcpy
+```
 
 ## 5. File Sorting 📂
 ```bash
