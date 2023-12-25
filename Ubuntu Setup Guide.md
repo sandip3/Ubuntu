@@ -31,6 +31,7 @@
     - [Email Client: Mozilla Thunderbird](#email-client-mozilla-thunderbird-📧) 📧
     - [Calendar: GNOME Calendar](#calendar-gnome-calendar-🗓️) 🗓️
     - [Android Studio Setup](#android-studio-setup-📱) 📱
+    - [Install obsidian ( flatpak )](#install-obsidian-using-flatpak-🌌) 🌌
     - [Tor Browser](#tor-browser-🔒) 🔒
     - [Favorite Apps (VLC, GIMP, GNOME Partition Editor)](#favorite-apps-vlc-gimp-gnome-partition-editor-🖼️) 🖼️
     - [Anaconda Setup](#anaconda-setup-⚙️)⚙️
@@ -284,6 +285,29 @@ StartupWMClass=jetbrains-android-studio
 Name[en_GB]=android-studio.desktop
 ```
 ---
+
+### Install Obsidian using Flatpak 🌌
+
+- To enhance your productivity and note-taking experience, you can install Obsidian using Flatpak. Follow the steps below:
+
+1. **Install Obsidian:**
+    Open your terminal and execute the following command to install Obsidian:
+
+    ```bash
+    flatpak install flathub md.obsidian.Obsidian
+    ```
+
+2. **Open Obsidian:**
+    Once the installation is complete, launch Obsidian with the following command:
+
+    ```bash
+    flatpak run md.obsidian.Obsidian
+    ```
+
+- Now, Obsidian is ready to help you organize and connect your thoughts seamlessly. Enjoy your note-taking journey with Obsidian! 🚀✨
+
+---
+
 
 ### Tor Browser 🔒
 - Download Tor browser file
