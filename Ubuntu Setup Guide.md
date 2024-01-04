@@ -31,6 +31,7 @@
     - [Installing LibreOffice on Ubuntu](#installing-libreoffice-on-ubuntu-📊) 📊
     - [Email Client: Mozilla Thunderbird](#email-client-mozilla-thunderbird-📧) 📧
     - [Calendar: GNOME Calendar](#calendar-gnome-calendar-🗓️) 🗓️
+    - [installing Spotify on Ubuntu](#installing-spotify-on-ubuntu-🎵)🎵
     - [Android Studio Setup](#android-studio-setup-📱) 📱
     - [Install obsidian ( flatpak )](#install-obsidian-using-flatpak-🌌) 🌌
     - [Tor Browser](#tor-browser-🔒) 🔒
@@ -41,6 +42,7 @@
     - [Node.js and Angular Setup](#nodejs--react-and-angular-setup-⚙️) ⚙️
     - [Installing TensorFlow on Ubuntu](#installing-tensorflow-on-ubuntu-🧠) 🧠
 14. [Uninstalling Applications](#14-uninstalling-applications) 📦
+    - [Uninstalling LibreOffice ](#uninstalling-libreoffice-🗑️)🗑️
     - [Uninstalling Node.js](#uninstalling-nodejs-⚙️) ⚙️
     - [Uninstalling Android Studio](#uninstalling-android-studio-📱) 📱
     - [Uninstalling PyCharm Community Edition](#uninstalling-pycharm-community-edition-🐍) 🐍
