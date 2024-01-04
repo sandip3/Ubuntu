@@ -11,6 +11,7 @@
    - [Low Battery Notification](#low-battery-notification-🔋) 🔋
    - [Gnome Shell Integration](#gnome-shell-integration-🐚) 🐚
 4. [Installing Utilities](#4-installing-utilities-🛠️) 🛠️
+   - [Install Cheese](#install-cheese)
    - [Install Ubuntu Restricted Extras](#install-ubuntu-restricted-extras-media-codecs-🎥) 🎥
    - [Install Preload](#install-preload-🚀) 🚀
    - [Minimize to Click](#minimize-to-click-👇) 👇
@@ -20,7 +21,7 @@
 6. [System Maintenance](#6-system-maintenance-cleaning-🧹) 🧹
 7. [Improve Laptop Battery](#7-improve-laptop-battery-🔋) 🔋
 8. [Enable/Disable Bluetooth on Startup](#8-enabledisable-bluetooth-on-startup-🎧) 🎧
-9. [Enable/Disable Wi-Fi on Startup](#9-enabledisable-wi-fi-on-startup-📡) 📡
+9.  [Enable/Disable Wi-Fi on Startup](#9-enabledisable-wi-fi-on-startup-📡) 📡
 10. [Browsers](#10-browsers-🌐) 🌐
     - [Firefox Setup](#firefox-setup-🦊) 🦊
     - [Firefox Developer Edition](#firefox-developer-edition-🦊) 🦊
@@ -106,6 +107,12 @@ sudo apt install gnome-shell-extensions -y
 ```
 
 ## 4. Installing Utilities 🛠️
+
+### Install Cheese:
+
+```bash
+sudo apt install cheese
+```
 
 ### Install Ubuntu Restricted Extras (Media Codecs) 🎥
 ```bash
