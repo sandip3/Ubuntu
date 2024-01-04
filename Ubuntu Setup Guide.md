@@ -28,6 +28,7 @@
     - [BleachBit](#bleachbit-🧽) 🧽
 12. [Update & Upgrade](#12-update--upgrade-🔄) 🔄
 13. [Installing Applications](#13-installing-applications-📦) 📦
+    - [Installing LibreOffice on Ubuntu](#installing-libreoffice-on-ubuntu-📊) 📊
     - [Email Client: Mozilla Thunderbird](#email-client-mozilla-thunderbird-📧) 📧
     - [Calendar: GNOME Calendar](#calendar-gnome-calendar-🗓️) 🗓️
     - [Android Studio Setup](#android-studio-setup-📱) 📱
@@ -240,18 +241,60 @@ sudo apt-get update -y
 
 ## 13. Installing Applications 📦
 
+### Installing LibreOffice on Ubuntu 📊
+
+Use the following steps to install the LibreOffice  pplication on a Ubuntu system.
+
+ 1. Add the LibreOffice PPA to the Ubuntu system:
+```bash
+sudo add-apt-repository ppa:libreoffice/ppa
+```
+
+2. Update the Apt cache:
+```bash
+sudo apt update
+```
+
+3. Install the complete LibreOffice suite on Ubuntu system:
+```bash
+sudo apt install libreoffice
+```
+- When prompted for confirmation, press ‘y’ and hit enter to continue.
+
+---
 ### Email Client: Mozilla Thunderbird 📧
 
 ```bash
 sudo apt install thunderbird -y
 ```
-
+---
 ### Calendar: GNOME Calendar 🗓️
 
 ```bash
 sudo apt install gnome-calendar -y
 ```
+---
 
+### installing Spotify on Ubuntu 🎵
+
+1. Configure the Spotify Debian Repository:
+
+```bash
+curl -sS https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+```
+2. Update the Apt cache:
+
+```bash
+sudo apt-get update
+```
+
+3. Install the Spotify client:
+
+```bash
+sudo apt-get install spotify-client
+```
+---
 ### Android Studio Setup 📱
 ```bash
 sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils -y
@@ -590,6 +633,25 @@ To empower your Ubuntu system with the capabilities of TensorFlow, follow these 
    ```
 
 ## 14. Uninstalling Applications 🗑️
+
+### Uninstalling LibreOffice 🗑️
+
+1. Remove LibreOffice:
+```bash
+sudo apt remove --purge libreoffice
+```
+
+2. Auto-remove any residual dependencies:
+```bash
+sudo apt autoremove
+```
+
+3. Disable the LibreOffice PPA:
+```bash
+sudo add-apt-repository --remove ppa:libreoffice/ppa
+```
+
+---
 
 ### Uninstalling Node.js ⚙️
 ```bash
