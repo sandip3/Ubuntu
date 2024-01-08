@@ -62,3 +62,8 @@ Follow these steps to install and use the extensions:
 14. **Colorful Battery Indicator** 🔋
     - Extension Link: [Colorful Battery Indicator](https://extensions.gnome.org/extension/4817/colorful-battery-indicator/)
     - Description: Add a colorful battery indicator to your top bar for better visibility.
+
+15. **GNOME Shell Pomodoro** ⏲️
+   ```bash
+      sudo apt install gnome-shell-pomodoro
+   ```

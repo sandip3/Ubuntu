@@ -176,8 +176,6 @@ To enable plugins in Oh My Zsh, follow these steps:
 
 ```bash
 cd ~/.oh-my-zsh/plugins
-
-```
 ls
 ```
 
