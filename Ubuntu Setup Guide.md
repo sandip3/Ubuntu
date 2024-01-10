@@ -108,6 +108,10 @@ sudo apt install gnome-shell-extensions -y
 
 ## 4. Installing Utilities 🛠️
 
+### Firewall Configuration 🔥
+
+- Download "Firewall Configuration" from ubuntu software
+
 ### Install Cheese:
 
 ```bash

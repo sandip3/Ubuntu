@@ -275,7 +275,7 @@ To delay the startup of an app:
 3. Add the following command:
 
 ```bash
-bash -c "sleep 30 && <App_Name>"
+sleep 30;]"<App_Name>"
 ```
 - This app will sleep for 10 seconds.
 
@@ -285,7 +285,7 @@ To launch an app in the background:
 2. Use the following command:
 
 ```bash
-<App> &
+"<App>"-background
 ```
 - This app will start in the background.
 
