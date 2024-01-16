@@ -15,9 +15,7 @@ For a customized terminal prompt using **Starship**, follow these steps:
 - Install the necessary tools:
 
 ```bash
-sudo apt install curl
-curl -sS https://starship.rs/install.sh | sh
-sudo snap install starship --edge
+sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 ```
 
 - Open your **.bashrc** file:
