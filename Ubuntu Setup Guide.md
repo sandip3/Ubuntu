@@ -118,6 +118,14 @@ sudo apt install gnome-shell-extensions -y
 sudo apt install cheese
 ```
 
+### Rhythmbox Audio Player
+
+```bash
+sudo add-apt-repository ppa:ubuntuhandbook1/apps
+sudo apt-get update
+sudo apt-get install rhythmbox
+```
+
 ### Install Ubuntu Restricted Extras (Media Codecs) 🎥
 ```bash
 sudo apt install ubuntu-restricted-extras -y
