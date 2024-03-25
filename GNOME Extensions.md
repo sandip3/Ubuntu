@@ -67,3 +67,11 @@ Follow these steps to install and use the extensions:
    ```bash
       sudo apt install gnome-shell-pomodoro
    ```
+
+16. **Material You NewTab Theme**
+    - Extension Link: [Material You NewTab Theme](https://addons.mozilla.org/en-US/firefox/addon/material-you-newtab/)
+    - Description: 
+
+17. Blur my Shell
+   - Extension Link: [Blur my Shell](https://extensions.gnome.org/extension/3193/blur-my-shell/)
+   - Description:

@@ -2,33 +2,34 @@
 
 **Index:**
 
-1. [Setting Up a New "Dub" File](#1-setting-up-a-new-dub-file-📁) 📁
-2. [Package Managers](#2-package-managers-📦) 📦
+1. [Customizing the Boot Manager](#0-customizing-the-boot-manager-🖥️) 🖥️
+2. [Setting Up a New "Dub" File](#1-setting-up-a-new-dub-file-📁) 📁
+3. [Package Managers](#2-package-managers-📦) 📦
    - [Synaptic Package Manager](#synaptic-package-manager-🖥️‍🔍) 🖥️‍🔍
    - [Flatpak](#flatpak-📦) 📦
-3. [Basic](#3-basic-⚙️) ⚙️
+4. [Basic](#3-basic-⚙️) ⚙️
    - [Fully Charged Notification](#fully-charged-notification-🔋) 🔋
    - [Low Battery Notification](#low-battery-notification-🔋) 🔋
    - [Gnome Shell Integration](#gnome-shell-integration-🐚) 🐚
-4. [Installing Utilities](#4-installing-utilities-🛠️) 🛠️
+5. [Installing Utilities](#4-installing-utilities-🛠️) 🛠️
    - [Install Cheese](#install-cheese)
    - [Install Ubuntu Restricted Extras](#install-ubuntu-restricted-extras-media-codecs-🎥) 🎥
    - [Install Preload](#install-preload-🚀) 🚀
    - [Minimize to Click](#minimize-to-click-👇) 👇
    - [System Optimization with Stacer](#system-optimization-with-stacer-🛠️) 🛠️
    - [Install scrcpy](#install-scrcpy-📱) 📱
-5. [File Sorting](#5-file-sorting-📂) 📂
-6. [System Maintenance](#6-system-maintenance-cleaning-🧹) 🧹
-7. [Improve Laptop Battery](#7-improve-laptop-battery-🔋) 🔋
-8. [Enable/Disable Bluetooth on Startup](#8-enabledisable-bluetooth-on-startup-🎧) 🎧
-9.  [Enable/Disable Wi-Fi on Startup](#9-enabledisable-wi-fi-on-startup-📡) 📡
-10. [Browsers](#10-browsers-🌐) 🌐
+6. [File Sorting](#5-file-sorting-📂) 📂
+7. [System Maintenance](#6-system-maintenance-cleaning-🧹) 🧹
+8. [Improve Laptop Battery](#7-improve-laptop-battery-🔋) 🔋
+9. [Enable/Disable Bluetooth on Startup](#8-enabledisable-bluetooth-on-startup-🎧) 🎧
+10. [Enable/Disable Wi-Fi on Startup](#9-enabledisable-wi-fi-on-startup-📡) 📡
+11. [Browsers](#10-browsers-🌐) 🌐
     - [Firefox Setup](#firefox-setup-🦊) 🦊
     - [Firefox Developer Edition](#firefox-developer-edition-🦊) 🦊
-11. [Cleaning Tools](#11-cleaning-tools-🧼) 🧼
+12. [Cleaning Tools](#11-cleaning-tools-🧼) 🧼
     - [BleachBit](#bleachbit-🧽) 🧽
-12. [Update & Upgrade](#12-update--upgrade-🔄) 🔄
-13. [Installing Applications](#13-installing-applications-📦) 📦
+13. [Update & Upgrade](#12-update--upgrade-🔄) 🔄
+14. [Installing Applications](#13-installing-applications-📦) 📦
     - [Installing LibreOffice on Ubuntu](#installing-libreoffice-on-ubuntu-📊) 📊
     - [Email Client: Mozilla Thunderbird](#email-client-mozilla-thunderbird-📧) 📧
     - [Calendar: GNOME Calendar](#calendar-gnome-calendar-🗓️) 🗓️
@@ -42,12 +43,49 @@
     - [PyCharm Community Edition](#pycharm-community-edition-🐍🌄)
     - [Node.js and Angular Setup](#nodejs--react-and-angular-setup-⚙️) ⚙️
     - [Installing TensorFlow on Ubuntu](#installing-tensorflow-on-ubuntu-🧠) 🧠
-14. [Uninstalling Applications](#14-uninstalling-applications) 📦
+15. [Uninstalling Applications](#14-uninstalling-applications) 📦
     - [Uninstalling LibreOffice ](#uninstalling-libreoffice-🗑️)🗑️
     - [Uninstalling Node.js](#uninstalling-nodejs-⚙️) ⚙️
     - [Uninstalling Android Studio](#uninstalling-android-studio-📱) 📱
     - [Uninstalling PyCharm Community Edition](#uninstalling-pycharm-community-edition-🐍) 🐍
-15. [End of Guide](#15-end-of-guide-📚) 📚
+
+---
+
+## 0. Customizing the Boot Manager 🖥️
+
+### Installing `rEFInd` Boot Manager
+```bash
+sudo apt install refind
+reboot
+```
+
+### Configuring rEFInd Boot Manager
+- Set rEFInd's boot priority in BIOS to the top.
+- Restart the system.
+- Hide unnecessary partitions by pressing `delete` and confirming with `yes`.
+- Press `esc` to refresh.
+- Restart Ubuntu again.
+
+### Installing and Customizing rEFInd Theme (Glassy)
+```bash
+cd Downloads/
+git clone https://github.com/Pr0cella/rEFInd-glassy
+sudo su
+mount /dev/nvme0n1p1 /mnt     # Use your EFI partition's path
+cd /mnt/EFI/refind/
+mkdir themes
+mv /home/saint/Downloads/rEFInd-glassy /mnt/EFI/refind/themes/   # Replace with actual path
+cd themes
+```
+
+#### Editing rEFInd Configuration
+```bash
+cd /mnt/EFI/refind
+nano refind.conf 
+```
+- Add `include themes/rEFInd-glassy/theme.conf` at the bottom.
+- Save and reboot to see the changes.
+
 
 ---
 
@@ -728,6 +766,40 @@ rm -rf ~/android-studio-2022.1.1.21-linux.tar.gz
 
 With these steps, you'll conduct a digital spring cleaning, gracefully escorting PyCharm Community Edition out of your digital abode. Make sure to save any precious projects or configurations before embarking on this enchanting uninstallation quest. 🚀👋
 
-## 15. End of Guide 📚
+## 0. Customizing the Boot Manager 🖥️
+
+### Installing rEFInd Boot Manager
+```bash
+sudo apt install refind
+reboot
+```
+
+### Configuring rEFInd Boot Manager
+- Set rEFInd's boot priority in BIOS to the top.
+- Restart the system.
+- Hide unnecessary partitions by pressing `delete` and confirming with `yes`.
+- Press `esc` to refresh.
+- Restart Ubuntu again.
+
+### Installing and Customizing rEFInd Theme (Glassy)
+```bash
+cd Downloads/
+git clone https://github.com/Pr0cella/rEFInd-glassy
+sudo su
+mount /dev/nvme0n1p1 /mnt     # Use your EFI partition's path
+cd /mnt/EFI/refind/
+mkdir themes
+mv /home/saint/Downloads/rEFInd-glassy /mnt/EFI/refind/themes/   # Replace with actual path
+cd themes
+```
+
+#### Editing rEFInd Configuration
+```bash
+cd /mnt/EFI/refind
+nano refind.conf 
+```
+- Add `include themes/rEFInd-glassy/theme.conf` at the bottom.
+- Save and reboot to see the changes.
+
 
 ---
