@@ -3,8 +3,13 @@
 To set up and block specific websites on your WiFi router (**Model: TL-WR841N / TL-WR841ND**), follow these step-by-step instructions:
 
 **Model No: TL-WR841N / TL-WR841ND**
-   <!-- - **Username:** Manojmishra
-   - **Password:** india -->
+   <!-- 
+   - **Username:** Manojmishra
+   - **Password:** india 
+
+   - in **Advanced**
+   - Service Name : HATHWAY    -->
+
 
 ## **WiFi Block Tutorial 🚧**
 

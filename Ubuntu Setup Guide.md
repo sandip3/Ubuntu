@@ -26,6 +26,7 @@
 11. [Browsers](#10-browsers-🌐) 🌐
     - [Firefox Setup](#firefox-setup-🦊) 🦊
     - [Firefox Developer Edition](#firefox-developer-edition-🦊) 🦊
+    - [SQL lite Browser](#installing-and-using-sqlite-browser-on-ubuntu-📊)📊
 12. [Cleaning Tools](#11-cleaning-tools-🧼) 🧼
     - [BleachBit](#bleachbit-🧽) 🧽
 13. [Update & Upgrade](#12-update--upgrade-🔄) 🔄
@@ -284,6 +285,71 @@ MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/vn
 StartupWMClass=Firefox Developer Edition
 StartupNotify=true
 ```
+
+---
+
+Got it! If you want to install and use SQLite Browser on Ubuntu, here's the SQL-related part of that:
+
+### Installing and Using SQLite Browser on Ubuntu 📊
+
+**1. Install SQLite Browser:**
+
+Open your terminal and run:
+```bash
+sudo apt update
+sudo apt install sqlitebrowser -y
+```
+
+**2. Launch SQLite Browser:**
+
+After installation, you can start SQLite Browser from the terminal or application menu.
+
+To start from the terminal, run:
+```bash
+sqlitebrowser
+```
+
+**3. Using SQLite Browser:**
+
+- **Open a Database:**
+  - Click on `File` > `Open Database` and select your `.db` file.
+
+- **Create a New Database:**
+  - Click on `File` > `New Database`, enter the name for your new database, and save it.
+
+- **Execute SQL Queries:**
+  - Go to the `Execute SQL` tab where you can enter and run SQL queries.
+
+- **Example SQL Commands:**
+
+  - **Create a Table:**
+    ```sql
+    CREATE TABLE mytable (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL
+    );
+    ```
+
+  - **Insert Data:**
+    ```sql
+    INSERT INTO mytable (name) VALUES ('example');
+    ```
+
+  - **Query Data:**
+    ```sql
+    SELECT * FROM mytable;
+    ```
+
+  - **Delete Data:**
+    ```sql
+    DELETE FROM mytable WHERE id = 1;
+    ```
+
+- **Save Changes:**
+  - Make sure to save any changes to the database by clicking on `File` > `Save` or using the save icon.
+
+- SQLite Browser provides a graphical interface for managing SQLite databases, making it easier to perform database operations without writing commands in the terminal.
+
 
 ## 11. Cleaning Tools 🧼
 
@@ -765,41 +831,5 @@ rm -rf ~/android-studio-2022.1.1.21-linux.tar.gz
    Replace `XXXX.X` with the version number.
 
 With these steps, you'll conduct a digital spring cleaning, gracefully escorting PyCharm Community Edition out of your digital abode. Make sure to save any precious projects or configurations before embarking on this enchanting uninstallation quest. 🚀👋
-
-## 0. Customizing the Boot Manager 🖥️
-
-### Installing rEFInd Boot Manager
-```bash
-sudo apt install refind
-reboot
-```
-
-### Configuring rEFInd Boot Manager
-- Set rEFInd's boot priority in BIOS to the top.
-- Restart the system.
-- Hide unnecessary partitions by pressing `delete` and confirming with `yes`.
-- Press `esc` to refresh.
-- Restart Ubuntu again.
-
-### Installing and Customizing rEFInd Theme (Glassy)
-```bash
-cd Downloads/
-git clone https://github.com/Pr0cella/rEFInd-glassy
-sudo su
-mount /dev/nvme0n1p1 /mnt     # Use your EFI partition's path
-cd /mnt/EFI/refind/
-mkdir themes
-mv /home/saint/Downloads/rEFInd-glassy /mnt/EFI/refind/themes/   # Replace with actual path
-cd themes
-```
-
-#### Editing rEFInd Configuration
-```bash
-cd /mnt/EFI/refind
-nano refind.conf 
-```
-- Add `include themes/rEFInd-glassy/theme.conf` at the bottom.
-- Save and reboot to see the changes.
-
 
 ---
