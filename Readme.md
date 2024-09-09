@@ -4,7 +4,7 @@
 
 🔭📚 Explore a Galaxy of Guides:
 
-## 📚 [Anki Extensions](/Anki%20Extensions.md) 🧠💡🚀
+## 📚 [Anki Extensions](/Anki%20Extensions.md) 💡🚀
 Enhance your Anki prowess with a constellation of extensions! Unleash the power of knowledge with just a click. 🌌
 
 ## 🖥️ [Customizing For Ubuntu](/Customizing%20For%20Ubuntu.md) 🎨💻🌈
@@ -17,4 +17,3 @@ Embrace the GNOME cosmos! Empower your digital universe with extensions that amp
 Navigate the Ubuntu constellations confidently. Unveil the secrets of a seamless setup journey among the stars. 🪐
 
 🌌 Set your course, fellow explorer, and venture forth into the endless realms of knowledge and inspiration! ✨🚀🔍
-
