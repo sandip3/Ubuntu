@@ -157,6 +157,11 @@ sudo apt install gnome-shell-extensions -y
 sudo apt install cheese
 ```
 
+### Install SimpleScreenRecorder 🎥
+```bash
+sudo apt install simplescreenrecorder -y
+```
+
 ### Rhythmbox Audio Player
 
 ```bash
