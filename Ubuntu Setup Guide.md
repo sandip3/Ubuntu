@@ -507,6 +507,19 @@ chmod a+x ~/Desktop/start-tor-browser.desktop
 sudo apt install vlc gimp gparted -y
 ```
 
+### Install Node.js and npm ⚙️
+```bash
+sudo apt install nodejs
+```
+- Verify the installation:
+```bash
+node -v
+```
+- Install npm:
+```bash
+sudo apt install npm
+```
+
 ---
 
 ### Anaconda Setup ⚙️
