@@ -520,6 +520,14 @@ node -v
 sudo apt install npm
 ```
 
+### Install Vim 📝
+```bash
+sudo apt install vim
+```
+- Launch Vim:
+```bash
+vim
+```
 ---
 
 ### Anaconda Setup ⚙️
