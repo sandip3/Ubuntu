@@ -297,6 +297,8 @@ StartupNotify=true
 
 ```bash
 sudo apt install mysql-server -y
+sudo systemctl status mysql
+sudo mysql
 ```
 
 ---
