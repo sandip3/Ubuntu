@@ -293,8 +293,13 @@ StartupNotify=true
 
 ---
 
-Got it! If you want to install and use SQLite Browser on Ubuntu, here's the SQL-related part of that:
+### MySQL server 
 
+```bash
+sudo apt install mysql-server -y
+```
+
+---
 ### Installing and Using SQLite Browser on Ubuntu 📊
 
 **1. Install SQLite Browser:**
