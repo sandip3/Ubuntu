@@ -301,6 +301,18 @@ sudo systemctl status mysql
 sudo mysql
 ```
 
+### MySQL Workbench `.dub` File 🗄️
+
+To download and install **MySQL Workbench**, follow these steps:
+
+1. Download the `.dub` file from [MySQL Workbench](https://dev.mysql.com/downloads/workbench/).
+2. Select **Ubuntu** from the dropdown list.
+3. Click on the **first edition** to download.
+
+![MySQL Workbench Download](https://linux.how2shout.com/wp-content/uploads/2024/08/Download-MySQL-Workbench-for-Ubuntu-24.04-1024x618.webp)
+
+Once downloaded, right-click the file and open it with **Software Installer** to begin the installation.
+
 ---
 ### Installing and Using SQLite Browser on Ubuntu 📊
 
