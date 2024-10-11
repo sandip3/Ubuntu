@@ -313,6 +313,12 @@ To download and install **MySQL Workbench**, follow these steps:
 
 Once downloaded, right-click the file and open it with **Software Installer** to begin the installation.
 
+```bash
+sudo mysql -u root
+# Once logged in
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+```
+
 ---
 ### Installing and Using SQLite Browser on Ubuntu 📊
 
