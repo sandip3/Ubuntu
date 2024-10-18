@@ -425,19 +425,13 @@ sudo apt install gnome-calendar -y
 1. Configure the Spotify Debian Repository:
 
 ```bash
-curl -sS https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
+curl -sS https://download.spotify.com/debian/pubkey_6224F9941A8AA6D1.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 ```
-2. Update the Apt cache:
+2. Install the Spotify client:
 
 ```bash
-sudo apt-get update
-```
-
-3. Install the Spotify client:
-
-```bash
-sudo apt-get install spotify-client
+sudo apt-get update && sudo apt-get install spotify-client
 ```
 ---
 ### Android Studio Setup 📱
