@@ -2,53 +2,71 @@
 
 **Index:**
 
-1. [Customizing the Boot Manager](#0-customizing-the-boot-manager-🖥️) 🖥️
-2. [Setting Up a New "Dub" File](#1-setting-up-a-new-dub-file-📁) 📁
-3. [Package Managers](#2-package-managers-📦) 📦
-   - [Synaptic Package Manager](#synaptic-package-manager-🖥️‍🔍) 🖥️‍🔍
-   - [Flatpak](#flatpak-📦) 📦
-4. [Basic](#3-basic-⚙️) ⚙️
-   - [Fully Charged Notification](#fully-charged-notification-🔋) 🔋
-   - [Low Battery Notification](#low-battery-notification-🔋) 🔋
-   - [Gnome Shell Integration](#gnome-shell-integration-🐚) 🐚
-5. [Installing Utilities](#4-installing-utilities-🛠️) 🛠️
-   - [Install Cheese](#install-cheese)
-   - [Install Ubuntu Restricted Extras](#install-ubuntu-restricted-extras-media-codecs-🎥) 🎥
-   - [Install Preload](#install-preload-🚀) 🚀
-   - [Minimize to Click](#minimize-to-click-👇) 👇
-   - [System Optimization with Stacer](#system-optimization-with-stacer-🛠️) 🛠️
-   - [Install scrcpy](#install-scrcpy-📱) 📱
-6. [File Sorting](#5-file-sorting-📂) 📂
-7. [System Maintenance](#6-system-maintenance-cleaning-🧹) 🧹
-8. [Improve Laptop Battery](#7-improve-laptop-battery-🔋) 🔋
-9. [Enable/Disable Bluetooth on Startup](#8-enabledisable-bluetooth-on-startup-🎧) 🎧
-10. [Enable/Disable Wi-Fi on Startup](#9-enabledisable-wi-fi-on-startup-📡) 📡
-11. [Browsers](#10-browsers-🌐) 🌐
-    - [Firefox Setup](#firefox-setup-🦊) 🦊
-    - [Firefox Developer Edition](#firefox-developer-edition-🦊) 🦊
-    - [SQL lite Browser](#installing-and-using-sqlite-browser-on-ubuntu-📊)📊
-12. [Cleaning Tools](#11-cleaning-tools-🧼) 🧼
-    - [BleachBit](#bleachbit-🧽) 🧽
-13. [Update & Upgrade](#12-update--upgrade-🔄) 🔄
-14. [Installing Applications](#13-installing-applications-📦) 📦
-    - [Installing LibreOffice on Ubuntu](#installing-libreoffice-on-ubuntu-📊) 📊
-    - [Email Client: Mozilla Thunderbird](#email-client-mozilla-thunderbird-📧) 📧
-    - [Calendar: GNOME Calendar](#calendar-gnome-calendar-🗓️) 🗓️
-    - [installing Spotify on Ubuntu](#installing-spotify-on-ubuntu-🎵)🎵
-    - [Android Studio Setup](#android-studio-setup-📱) 📱
-    - [Install obsidian ( flatpak )](#install-obsidian-using-flatpak-🌌) 🌌
-    - [Tor Browser](#tor-browser-🔒) 🔒
-    - [Favorite Apps (VLC, GIMP, GNOME Partition Editor)](#favorite-apps-vlc-gimp-gnome-partition-editor-🖼️) 🖼️
-    - [Anaconda Setup](#anaconda-setup-⚙️)⚙️
-    - [Thonny](#thonny-installation-🐍)🐍
-    - [PyCharm Community Edition](#pycharm-community-edition-🐍🌄)
-    - [Node.js and Angular Setup](#nodejs--react-and-angular-setup-⚙️) ⚙️
-    - [Installing TensorFlow on Ubuntu](#installing-tensorflow-on-ubuntu-🧠) 🧠
-15. [Uninstalling Applications](#14-uninstalling-applications) 📦
-    - [Uninstalling LibreOffice ](#uninstalling-libreoffice-🗑️)🗑️
-    - [Uninstalling Node.js](#uninstalling-nodejs-⚙️) ⚙️
-    - [Uninstalling Android Studio](#uninstalling-android-studio-📱) 📱
-    - [Uninstalling PyCharm Community Edition](#uninstalling-pycharm-community-edition-🐍) 🐍
+- [📚 Ultimate Ubuntu Setup Guide 📚](#-ultimate-ubuntu-setup-guide-)
+  - [0. Customizing the Boot Manager 🖥️](#0-customizing-the-boot-manager-️)
+    - [Installing `rEFInd` Boot Manager](#installing-refind-boot-manager)
+    - [Configuring rEFInd Boot Manager](#configuring-refind-boot-manager)
+    - [Installing and Customizing rEFInd Theme (Glassy)](#installing-and-customizing-refind-theme-glassy)
+      - [Editing rEFInd Configuration](#editing-refind-configuration)
+  - [1. Setting Up a New "Dub" File 📁](#1-setting-up-a-new-dub-file-)
+  - [2. Package Managers 📦](#2-package-managers-)
+    - [Synaptic Package Manager 🖥️‍🔍](#synaptic-package-manager-️)
+    - [Flatpak 📦](#flatpak-)
+  - [3. Basic ⚙️](#3-basic-️)
+    - [Fully Charged Notification 🔋](#fully-charged-notification-)
+    - [Low Battery Notification 🔋](#low-battery-notification-)
+    - [Gnome Shell Integration 🐚](#gnome-shell-integration-)
+  - [4. Installing Utilities 🛠️](#4-installing-utilities-️)
+    - [Firewall Configuration 🔥](#firewall-configuration-)
+    - [Install Cheese:](#install-cheese)
+    - [Install SimpleScreenRecorder 🎥](#install-simplescreenrecorder-)
+    - [Rhythmbox Audio Player](#rhythmbox-audio-player)
+    - [Install Ubuntu Restricted Extras (Media Codecs) 🎥](#install-ubuntu-restricted-extras-media-codecs-)
+    - [Install Preload 🚀](#install-preload-)
+    - [Minimize to Click 👇](#minimize-to-click-)
+    - [System Optimization with Stacer 🛠️](#system-optimization-with-stacer-️)
+      - [Install Stacer 🚀](#install-stacer-)
+      - [Launch Stacer 🚀](#launch-stacer-)
+    - [Install scrcpy 📱](#install-scrcpy-)
+  - [5. File Sorting 📂](#5-file-sorting-)
+  - [6. System Maintenance \[cleaning\] 🧹](#6-system-maintenance-cleaning-)
+  - [7. Improve Laptop Battery 🔋](#7-improve-laptop-battery-)
+  - [8. Enable/Disable Bluetooth on Startup 🎧](#8-enabledisable-bluetooth-on-startup-)
+  - [9. Enable/Disable Wi-Fi on Startup 📡](#9-enabledisable-wi-fi-on-startup-)
+  - [10. Browsers 🌐](#10-browsers-)
+    - [Firefox Setup 🦊](#firefox-setup-)
+    - [Firefox Developer Edition 🦊](#firefox-developer-edition-)
+    - [Installing and Using SQLite Browser on Ubuntu 📊](#installing-and-using-sqlite-browser-on-ubuntu-)
+  - [11. Cleaning Tools 🧼](#11-cleaning-tools-)
+    - [BleachBit 🧽](#bleachbit-)
+  - [12. Update \& Upgrade 🔄](#12-update--upgrade-)
+  - [13. Installing Applications 📦](#13-installing-applications-)
+    - [Installing LibreOffice on Ubuntu 📊](#installing-libreoffice-on-ubuntu-)
+    - [Email Client: Mozilla Thunderbird 📧](#email-client-mozilla-thunderbird-)
+    - [Calendar: GNOME Calendar 🗓️](#calendar-gnome-calendar-️)
+    - [installing Spotify on Ubuntu 🎵](#installing-spotify-on-ubuntu-)
+    - [Android Studio Setup 📱](#android-studio-setup-)
+    - [Install Obsidian using Flatpak 🌌](#install-obsidian-using-flatpak-)
+    - [Tor Browser 🔒](#tor-browser-)
+    - [Favorite Apps (VLC, GIMP, GNOME Partition Editor) 🖼️](#favorite-apps-vlc-gimp-gnome-partition-editor-️)
+    - [Install Node.js and npm ⚙️](#install-nodejs-and-npm-️)
+    - [Install Vim 📝](#install-vim-)
+    - [Anaconda Setup ⚙️](#anaconda-setup-️)
+    - [Thonny Installation 🐍](#thonny-installation-)
+    - [PyCharm Community Edition Installation and Desktop Shortcut 🐍🌄](#pycharm-community-edition-installation-and-desktop-shortcut-)
+    - [Node.js , React and Angular Setup ⚙️](#nodejs--react-and-angular-setup-️)
+    - [Installing TensorFlow on Ubuntu 🧠](#installing-tensorflow-on-ubuntu-)
+  - [14. MySQL Installation Guide 🗄️](#14-mysql-installation-guide-️)
+    - [Prerequisites:](#prerequisites)
+    - [Steps:](#steps)
+    - [Notes:](#notes)
+  - [15. Uninstalling Applications 🗑️](#15-uninstalling-applications-️)
+    - [Uninstalling LibreOffice 🗑️](#uninstalling-libreoffice-️)
+    - [Uninstalling Node.js ⚙️](#uninstalling-nodejs-️)
+    - [Uninstalling Android Studio 📱](#uninstalling-android-studio-)
+    - [Uninstalling PyCharm Community Edition 🐍](#uninstalling-pycharm-community-edition-)
+
+
 
 ---
 
@@ -289,34 +307,6 @@ Categories=Network;WebBrowser;
 MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/vnd.mozilla.xul+xml;application/rss+xml;application/rdf+xml;image/gif;image/jpeg;image/png;x-scheme-handler/http;x-scheme-handler/https;
 StartupWMClass=Firefox Developer Edition
 StartupNotify=true
-```
-
----
-
-### MySQL server 
-
-```bash
-sudo apt install mysql-server -y
-sudo systemctl status mysql
-sudo mysql
-```
-
-### MySQL Workbench `.dub` File 🗄️
-
-To download and install **MySQL Workbench**, follow these steps:
-
-1. Download the `.dub` file from [MySQL Workbench](https://dev.mysql.com/downloads/workbench/).
-2. Select **Ubuntu** from the dropdown list.
-3. Click on the **first edition** to download.
-
-![MySQL Workbench Download](https://linux.how2shout.com/wp-content/uploads/2024/08/Download-MySQL-Workbench-for-Ubuntu-24.04-1024x618.webp)
-
-Once downloaded, right-click the file and open it with **Software Installer** to begin the installation.
-
-```bash
-sudo mysql -u root
-# Once logged in
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
 
 ---
@@ -808,7 +798,106 @@ To empower your Ubuntu system with the capabilities of TensorFlow, follow these 
    deactivate
    ```
 
-## 14. Uninstalling Applications 🗑️
+---
+
+## 14. MySQL Installation Guide 🗄️
+
+This guide outlines the steps to install and configure MySQL on a Linux system using the command line.
+
+### Prerequisites:
+- A Linux-based operating system (e.g., Ubuntu)
+- Sudo privileges
+
+Reference video: [MySQL Installation Video](https://youtu.be/ge59oGdUgKg?si=XmrY8PS9-xkGQLFr)
+
+### Steps:
+
+1. **Update Package Index**  
+   Update the list of available packages and their versions:
+   ```bash
+   sudo apt update
+   ```
+
+2. **Upgrade Installed Packages**  
+   Upgrade the installed packages to their latest versions:
+   ```bash
+   sudo apt upgrade
+   ```
+
+3. **Install MySQL Server**  
+   Install the MySQL server package:
+   ```bash
+   sudo apt install mysql-server
+   ```
+
+4. **Check MySQL Version**  
+   Verify the installation by checking the MySQL version:
+   ```bash
+   mysqld --version
+   ```
+
+5. **Secure MySQL Installation**  
+   Run the security script to improve MySQL security:
+   ```bash
+   sudo mysql_secure_installation
+   ```
+   - Answer 'n' to the prompts if unsure.
+   - Follow the prompts to:
+     - Set the root password,
+     - Remove anonymous users,
+     - Disallow remote root login.
+
+6. **Check MySQL Service Status**  
+   Ensure the MySQL service is running:
+   ```bash
+   sudo systemctl status mysql
+   ```
+
+7. **Access MySQL Command Line**  
+   Open the MySQL command line interface:
+   ```bash
+   sudo mysql
+   ```
+
+   - Configure the user:
+     ```sql
+     ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+     ```
+
+   - Show all system databases:
+     ```sql
+     SHOW DATABASES;
+     ```
+
+8. **Install MySQL Workbench**  
+   Install MySQL Workbench using Snap:
+   ```bash
+   sudo snap install mysql-workbench-community
+   ```
+
+   - After opening MySQL Workbench, set the local database in the SQL connection.
+
+9. **Log in to MySQL**  
+   Log in to your MySQL server using the root account:
+   ```bash
+   mysql -u root -p
+   ```
+
+10. **Create a New Database**  
+    Create a new database using the MySQL command line:
+    ```sql
+    CREATE DATABASE Sandip_DB;
+    \q
+    ```
+    - Check MySQL Workbench for the new database, and refresh if necessary.
+
+### Notes:
+- Follow the prompts during `mysql_secure_installation` to set a root password and secure your installation.
+- Ensure that you have internet access for package installation.
+
+---
+
+## 15. Uninstalling Applications 🗑️
 
 ### Uninstalling LibreOffice 🗑️
 
