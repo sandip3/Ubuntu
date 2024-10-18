@@ -809,6 +809,8 @@ This guide outlines the steps to install and configure MySQL on a Linux system u
 - Sudo privileges
 
 Reference video: [MySQL Installation Video](https://youtu.be/ge59oGdUgKg?si=XmrY8PS9-xkGQLFr)
+[How to Install MySQL on Ubuntu 22.04](https://simplifyingtechcode.wordpress.com/2024/08/11/how-to-install-mysql-on-ubuntu-22-04/)
+
 
 ### Steps:
 
