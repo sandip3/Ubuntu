@@ -241,7 +241,23 @@ nmcli radio wifi on
 nmcli radio wifi off
 ```
 
-## 10. Browsers 🌐
+## 10. ## Disable/Enable AnyDesk Service on Startup 💻  
+```bash
+sudo systemctl disable anydesk.service
+sudo systemctl status anydesk
+```
+
+**Note**: You might want to stop it first (or after) if it is running:  
+```bash
+sudo service anydesk stop
+```
+
+To start the AnyDesk service manually:  
+```bash
+sudo service anydesk start
+```
+
+## 11. Browsers 🌐
 
 ### Firefox Setup 🦊
 
@@ -287,8 +303,6 @@ StartupNotify=true
 ```
 
 ---
-
-Got it! If you want to install and use SQLite Browser on Ubuntu, here's the SQL-related part of that:
 
 ### Installing and Using SQLite Browser on Ubuntu 📊
 
@@ -351,20 +365,20 @@ sqlitebrowser
 - SQLite Browser provides a graphical interface for managing SQLite databases, making it easier to perform database operations without writing commands in the terminal.
 
 
-## 11. Cleaning Tools 🧼
+## 12. Cleaning Tools 🧼
 
 ### BleachBit 🧽
 ```bash
 sudo apt install bleachbit -y
 ```
 
-## 12. Update & Upgrade 🔄
+## 13. Update & Upgrade 🔄
 ```bash
 sudo apt update && sudo apt upgrade -y
 sudo apt-get update -y
 ```
 
-## 13. Installing Applications 📦
+## 14. Installing Applications 📦
 
 ### Installing LibreOffice on Ubuntu 📊
 
