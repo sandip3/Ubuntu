@@ -434,6 +434,30 @@ sudo apt-get update
 sudo apt-get install spotify-client
 ```
 ---
+
+### Install Figma 🖌️
+
+To install Figma on Ubuntu, use the `figma-linux` package with `snap`. Follow the steps below:
+
+1. **Install Figma-Linux:**
+   Open your terminal and run:
+   ```bash
+   sudo snap install figma-linux
+   ```
+
+2. **Enable Local Fonts:**
+   To use local fonts with the snapd version, create a symbolic link:
+   ```bash
+   sudo ln -s $HOME/.local/share/fonts $HOME/snap/figma-linux/current/.local/share/
+   ```
+
+3. **Launch Figma:**
+   After installation, search for "Figma" in your applications menu or run:
+   ```bash
+   figma-linux
+   ```
+
+---
 ### Android Studio Setup 📱
 ```bash
 sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils -y
