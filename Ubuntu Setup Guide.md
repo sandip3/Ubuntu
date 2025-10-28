@@ -170,6 +170,21 @@ sudo apt-get install rhythmbox
 sudo apt install ubuntu-restricted-extras -y
 ```
 
+### Install NTFS Support Tools 💽
+
+```bash
+sudo apt install ntfs-3g -y
+```
+
+* Allows you to **read and write** to NTFS-formatted partitions.
+* Mount an NTFS drive via terminal example:
+
+  ```bash
+  sudo mount -t ntfs-3g /dev/sdXN /media/ntfs
+  ```
+
+  *(Replace `/dev/sdXN` with your actual NTFS partition, e.g. `/dev/sda2`.)*
+
 ### Install Preload 🚀
 ```bash
 sudo apt install preload -y
@@ -224,6 +239,76 @@ sudo apt autoremove -y
 sudo apt install tlp tlp-rdw -y
 ```
 - Just run the above command, and you don’t need to do anything else. It’ll make your laptop battery last longer by implementing some power-saving protocols.
+
+## 7.1 Fix Microphone Auto Volume Issue 🎤
+
+If your microphone volume keeps lowering automatically on Ubuntu, follow these steps:
+
+### 1️⃣ Identify Sound System
+```bash
+pactl info | grep "Server Name"
+````
+
+If you see:
+
+* `PulseAudio (on PipeWire …)` → you're using **PipeWire (with PulseAudio compatibility)**.
+
+---
+
+### 2️⃣ Create PipeWire Config Override
+
+```bash
+mkdir -p ~/.config/pipewire
+cp /usr/share/pipewire/pipewire.conf ~/.config/pipewire/
+nano ~/.config/pipewire/pipewire.conf
+```
+
+Inside the file, search for:
+
+```
+context.properties = {
+```
+
+Add this line under it:
+
+```ini
+    flat-volumes = false
+```
+
+Save (`Ctrl + O`, `Enter`, `Ctrl + X`).
+
+---
+
+### 3️⃣ Restart Audio System
+
+```bash
+systemctl --user restart pipewire pipewire-pulse
+```
+
+(or just log out and log back in)
+
+---
+
+### 4️⃣ Disable Automatic Gain Control (AGC)
+
+To make sure no auto volume control module is active:
+
+```bash
+pactl list modules short | grep echo
+```
+
+If you see `module-echo-cancel`, remove it:
+
+```bash
+pactl unload-module module-echo-cancel
+```
+
+---
+
+✅ **Result:**
+Your microphone volume will stay stable across all apps (Discord, Meet, etc.), and Ubuntu won’t lower it automatically anymore.
+
+---
 
 ## 8. Enable/Disable Bluetooth on Startup 🎧
 ```bash
