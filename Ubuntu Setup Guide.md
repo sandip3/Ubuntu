@@ -230,9 +230,95 @@ gsettings set org.gnome.nautilus.preferences default-sort-order 'type'
 ```
 
 ## 6. System Maintenance [cleaning] 🧹
+
+> This section configures **automatic, system-wide cleanup** so Ubuntu keeps itself clean over time without manual effort.
+
+---
+
+### 🔄 Automatic APT Cleanup & Updates (System-Wide)
+
+Edit the APT auto-upgrade configuration file:
+
 ```bash
-sudo apt autoremove -y
+sudo nano /etc/apt/apt.conf.d/20auto-upgrades
 ```
+
+Add (or ensure) the following configuration:
+
+```text
+APT::Periodic::Update-Package-Lists "1";
+APT::Periodic::AutocleanInterval "7";
+APT::Periodic::Unattended-Upgrade "1";
+APT::Periodic::Download-Upgradeable-Packages "1";
+APT::Periodic::Verbose "0";
+APT::AutoRemove::RecommendsImportant "false";
+APT::AutoRemove::SuggestsImportant "false";
+```
+
+✅ **What this does:**
+
+* Updates package lists daily
+* Cleans package cache every 7 days
+* Automatically removes unused dependencies
+* Downloads updates in the background
+* Keeps the system lean without user intervention
+
+---
+
+### 🧾 Restart System Logging Service
+
+Apply log-related changes immediately:
+
+```bash
+sudo systemctl restart systemd-journald
+```
+
+---
+
+### 🗑️ Automatic Temporary File Cleanup
+
+Check that the systemd temp cleanup timer is active:
+
+```bash
+systemctl status systemd-tmpfiles-clean.timer
+```
+
+✔️ This service automatically cleans `/tmp` and other temporary files.
+
+---
+
+### 🧹 Remove Unused Packages & Old Kernels
+
+Run once to clean existing leftovers:
+
+```bash
+sudo apt autoremove --purge -y
+```
+
+✔️ Removes:
+
+* Unused packages
+* Old kernels
+* Residual dependencies
+
+---
+
+### 💾 SSD Maintenance (Highly Recommended)
+
+Enable automatic SSD trimming:
+
+```bash
+sudo systemctl enable fstrim.timer
+sudo systemctl start fstrim.timer
+```
+
+✅ **Benefits:**
+
+* Runs weekly
+* Improves SSD performance
+* Extends SSD lifespan
+
+---
 
 ## 7. Improve Laptop Battery 🔋
 ```bash
