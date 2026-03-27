@@ -319,118 +319,6 @@ sudo systemctl start fstrim.timer
 * Extends SSD lifespan
 
 ---
----
-# 6.1 External Drive Safety 🔌
----
-
-> Prevents data corruption and mount errors when using external hard drives (especially NTFS) on Ubuntu.
-
----
-
-### 📥 Install Required Tools
-
-```bash
-sudo apt install ntfs-3g udisks2 tlp -y
-```
-
----
-
-### ⚡ Enable TLP (Power Management)
-
-```bash
-sudo systemctl enable tlp
-sudo systemctl start tlp
-```
-
----
-
-### 🔧 Disable USB Autosuspend (CRITICAL)
-
-```bash
-sudo nano /etc/default/tlp
-```
-
-Add:
-
-```bash
-USB_AUTOSUSPEND=0
-```
-
-> ⚠️ On newer Ubuntu versions, this file may be empty — this is normal. Just add the line manually.
-
-Apply changes:
-
-```bash
-sudo systemctl restart tlp
-```
-
-Verify:
-
-```bash
-tlp-stat -u
-```
-
----
-
-### 🧠 Create Safe Eject Command (Linux Alternative to Windows “Safe Remove”)
-
-```bash
-nano ~/.bashrc
-```
-
-Add:
-
-```bash
-alias safeusb='sync && udisksctl power-off -b /dev/sdb'
-```
-
-Apply:
-
-```bash
-source ~/.bashrc
-```
-
----
-
-### 🔍 Find Your USB Device Name
-
-```bash
-lsblk
-```
-
-> Replace `/dev/sdb` in alias if your device is different.
-
----
-
-### 🚀 Usage
-
-Before unplugging external drive:
-
-```bash
-safeusb
-```
-
-Wait 2–3 seconds, then unplug.
-
----
-
-### ⚠️ Optional: Disable Auto Suspend (Fixes Idle Disconnect Issues)
-
-```bash
-sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
-```
-
----
-
-### 💡 Notes
-
-* Never unplug during file transfer
-* `sync` ensures all data is written
-* Prevents NTFS corruption and mount errors
-* Recommended even if using exFAT
-
-
----
 
 ## 7. Improve Laptop Battery 🔋
 ```bash
@@ -1154,3 +1042,97 @@ rm -rf ~/android-studio-2022.1.1.21-linux.tar.gz
 With these steps, you'll conduct a digital spring cleaning, gracefully escorting PyCharm Community Edition out of your digital abode. Make sure to save any precious projects or configurations before embarking on this enchanting uninstallation quest. 🚀👋
 
 ---
+
+
+---
+
+# 🆕 UPDATED SECTION (SAFE SYSTEM SETUP - 2026)
+
+## 🏷️ Command Compatibility
+
+- 🟢 LTS → Works best on Ubuntu LTS (22.04, 24.04)
+- 🔵 Non-LTS → For newer Ubuntu releases (23.x, 25.x)
+- ⚪ Universal → Works on all versions
+
+---
+
+## 🛡️ System Safety (NEW)
+
+### 🔌 External Drive Safety
+
+⚪ Universal
+
+Install required tools:
+
+sudo apt install ntfs-3g udisks2 tlp -y
+
+Enable TLP:
+
+sudo systemctl enable tlp
+sudo systemctl start tlp
+
+Disable USB autosuspend:
+
+sudo nano /etc/default/tlp
+
+Add:
+USB_AUTOSUSPEND=0
+
+Apply:
+sudo systemctl restart tlp
+
+Verify:
+tlp-stat -u
+
+---
+
+### 🧠 Safe Eject Command
+
+nano ~/.bashrc
+
+Add:
+alias safeusb='sync && udisksctl power-off -b /dev/sdb'
+
+Apply:
+source ~/.bashrc
+
+Find device:
+lsblk
+
+Usage:
+safeusb
+
+---
+
+### ⚠️ Suspend Issue Fix
+
+sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+
+---
+
+## 💾 Backup Strategy (NEW)
+
+⚪ Universal
+
+Basic backup:
+
+rsync -av --progress ~/Documents /media/backup/
+
+---
+
+## 🧪 Debug Commands (NEW)
+
+⚪ Universal
+
+lsblk
+df -h
+sudo fdisk -l
+
+---
+
+## ⚠️ Important Warning
+
+Before running autoremove:
+
+sudo apt autoremove --dry-run
+

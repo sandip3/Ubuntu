@@ -1,5 +1,17 @@
 # 📚 Ultimate Ubuntu Setup Guide 📚
 
+---
+
+### 🏷️ Command Compatibility
+
+- 🟢 LTS → Stable for Ubuntu LTS (22.04, 24.04)
+- 🔵 Non-LTS → For newer Ubuntu releases (23.x, 25.x)
+- ⚪ Universal → Works on all versions
+
+> ⚠️ Note: This guide is tested on Ubuntu Minimal.
+
+---
+
 **Index:**
 
 1. [Customizing the Boot Manager](#0-customizing-the-boot-manager-🖥️) 🖥️
@@ -231,6 +243,67 @@ gsettings set org.gnome.nautilus.preferences default-sort-order 'type'
 
 ## 6. System Maintenance [cleaning] 🧹
 
+---
+
+## 6.1 System Safety 🛡️
+
+### 🔌 External Drive Safety
+
+```bash
+sudo apt install ntfs-3g udisks2 tlp -y
+sudo systemctl enable tlp
+sudo systemctl start tlp
+```
+
+Disable autosuspend:
+
+```bash
+sudo nano /etc/default/tlp
+```
+
+Add:
+USB_AUTOSUSPEND=0
+
+Apply:
+```bash
+sudo systemctl restart tlp
+```
+
+---
+
+### 🧠 Safe Eject
+
+```bash
+nano ~/.bashrc
+```
+
+Add:
+```bash
+alias safeusb='sync && udisksctl power-off -b /dev/sdb'
+```
+
+Use:
+```bash
+safeusb
+```
+
+---
+
+## 6.2 Backup Strategy 💾
+
+```bash
+rsync -av --progress ~/Documents /media/backup/
+```
+
+Backup:
+- Projects
+- .config
+- SSH keys
+
+---
+
+
+
 > This section configures **automatic, system-wide cleanup** so Ubuntu keeps itself clean over time without manual effort.
 
 ---
@@ -292,6 +365,11 @@ systemctl status systemd-tmpfiles-clean.timer
 Run once to clean existing leftovers:
 
 ```bash
+⚠️ Run preview first:
+```
+sudo apt autoremove --dry-run
+```
+
 sudo apt autoremove --purge -y
 ```
 
@@ -317,118 +395,6 @@ sudo systemctl start fstrim.timer
 * Runs weekly
 * Improves SSD performance
 * Extends SSD lifespan
-
----
----
-# 6.1 External Drive Safety 🔌
----
-
-> Prevents data corruption and mount errors when using external hard drives (especially NTFS) on Ubuntu.
-
----
-
-### 📥 Install Required Tools
-
-```bash
-sudo apt install ntfs-3g udisks2 tlp -y
-```
-
----
-
-### ⚡ Enable TLP (Power Management)
-
-```bash
-sudo systemctl enable tlp
-sudo systemctl start tlp
-```
-
----
-
-### 🔧 Disable USB Autosuspend (CRITICAL)
-
-```bash
-sudo nano /etc/default/tlp
-```
-
-Add:
-
-```bash
-USB_AUTOSUSPEND=0
-```
-
-> ⚠️ On newer Ubuntu versions, this file may be empty — this is normal. Just add the line manually.
-
-Apply changes:
-
-```bash
-sudo systemctl restart tlp
-```
-
-Verify:
-
-```bash
-tlp-stat -u
-```
-
----
-
-### 🧠 Create Safe Eject Command (Linux Alternative to Windows “Safe Remove”)
-
-```bash
-nano ~/.bashrc
-```
-
-Add:
-
-```bash
-alias safeusb='sync && udisksctl power-off -b /dev/sdb'
-```
-
-Apply:
-
-```bash
-source ~/.bashrc
-```
-
----
-
-### 🔍 Find Your USB Device Name
-
-```bash
-lsblk
-```
-
-> Replace `/dev/sdb` in alias if your device is different.
-
----
-
-### 🚀 Usage
-
-Before unplugging external drive:
-
-```bash
-safeusb
-```
-
-Wait 2–3 seconds, then unplug.
-
----
-
-### ⚠️ Optional: Disable Auto Suspend (Fixes Idle Disconnect Issues)
-
-```bash
-sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
-```
-
----
-
-### 💡 Notes
-
-* Never unplug during file transfer
-* `sync` ensures all data is written
-* Prevents NTFS corruption and mount errors
-* Recommended even if using exFAT
-
 
 ---
 
