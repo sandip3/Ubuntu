@@ -1,5 +1,17 @@
 # 📚 Ultimate Ubuntu Setup Guide 📚
 
+---
+
+### 🏷️ Command Compatibility
+
+- 🟢 LTS → Stable for Ubuntu LTS (22.04, 24.04)
+- 🔵 Non-LTS → For newer Ubuntu releases (23.x, 25.x)
+- ⚪ Universal → Works on all versions
+
+> ⚠️ This guide is tested on Ubuntu Minimal.
+
+---
+
 **Index:**
 
 1. [Customizing the Boot Manager](#0-customizing-the-boot-manager-🖥️) 🖥️
@@ -231,6 +243,89 @@ gsettings set org.gnome.nautilus.preferences default-sort-order 'type'
 
 ## 6. System Maintenance [cleaning] 🧹
 
+---
+
+## 6.1 System Safety 🛡️
+
+### 🔌 External Drive Safety
+
+⚪ Universal
+
+```bash
+sudo apt install ntfs-3g udisks2 tlp -y
+sudo systemctl enable tlp
+sudo systemctl start tlp
+```
+
+### 🔧 Disable USB Autosuspend
+
+```bash
+sudo nano /etc/default/tlp
+```
+
+Add:
+
+```
+USB_AUTOSUSPEND=0
+```
+
+Apply:
+
+```bash
+sudo systemctl restart tlp
+```
+
+### 🧠 Safe Eject
+
+```bash
+nano ~/.bashrc
+```
+
+Add:
+
+```bash
+alias safeusb='sync && udisksctl power-off -b /dev/sdb'
+```
+
+Apply:
+
+```bash
+source ~/.bashrc
+```
+
+### 🔍 Find Device
+
+```bash
+lsblk
+```
+
+> Replace /dev/sdb accordingly
+
+### 🚀 Usage
+
+```bash
+safeusb
+```
+
+---
+
+## 6.2 Backup Strategy 💾
+
+⚪ Universal
+
+```bash
+rsync -av --progress ~/Documents /media/backup/
+```
+
+Backup:
+- Projects
+- .config
+- .ssh
+- Documents
+
+---
+
+
 > This section configures **automatic, system-wide cleanup** so Ubuntu keeps itself clean over time without manual effort.
 
 ---
@@ -292,6 +387,11 @@ systemctl status systemd-tmpfiles-clean.timer
 Run once to clean existing leftovers:
 
 ```bash
+⚠️ Always preview before running:
+```
+sudo apt autoremove --dry-run
+```
+
 sudo apt autoremove --purge -y
 ```
 
