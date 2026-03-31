@@ -51,11 +51,12 @@ reboot
 ```bash
 cd Downloads/
 git clone https://github.com/Pr0cella/rEFInd-glassy
-sudo -i
-mount /dev/nvme0n1p1 /mnt   # Replace with your EFI partition
+sudo su
+mount /dev/nvme0n1p1 /mnt     # Use your EFI partition's path
 cd /mnt/EFI/refind/
 mkdir themes
-mv /home/$USER/Downloads/rEFInd-glassy /mnt/EFI/refind/themes/
+mv /home/saint/Downloads/rEFInd-glassy /mnt/EFI/refind/themes/   # Replace with actual path
+cd themes
 ```
 
 ---
@@ -71,11 +72,9 @@ nano refind.conf
 
 ⚠️ Replace with your EFI partition (use `lsblk`)
 
-Add:
+- Add include `themes/rEFInd-glassy/theme.conf` at the bottom.
+- Save and reboot to see the changes.
 
-```text
-include themes/rEFInd-glassy/theme.conf
-```
 
 ---
 
@@ -104,7 +103,6 @@ sudo apt install synaptic -y
 ⚪ Universal
 
 ```bash
-sudo add-apt-repository ppa:flatpak/stable -y
 sudo apt update -y
 sudo apt install flatpak -y
 sudo apt install gnome-software-plugin-flatpak -y

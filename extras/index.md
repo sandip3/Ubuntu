@@ -28,7 +28,7 @@ Personalize your system:
 * GTK / Dracula themes
 * Zsh configuration
 * Keyboard shortcuts
-
+- GNOME Extensions ⭐
 ---
 
 ### 💻 [Development Tools](./development/github-setup.md)

@@ -99,4 +99,4 @@ ssh -T git@github.com
 
 ---
 
-> ⬅️ Previous: [Shortcuts](../customization/shortcuts.md) | ➡️ Next: [Python / OpenCV](./python-opencv.md)
+> ⬅️ Previous: [GNOME Extensions](../customization/gnome-extensions.md) | ➡️ Next: [Python / OpenCV](./python-opencv.md)
